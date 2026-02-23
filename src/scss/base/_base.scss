@@ -1,0 +1,30 @@
+@use "./variables" as *;
+
+body {
+  font-family: "Source Sans 3", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  line-height: 1.7;
+  font-size: 16px;
+  color: $text-dark;
+  background: #ffffff;
+}
+
+/* Headings – softer and more human */
+
+h1, h2, h3, h4 {
+  font-family: "Nunito", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: 700;
+  letter-spacing: .2px;
+}
+
+h1 {
+  font-size: clamp(32px, 4vw, 44px);
+}
+
+h2 {
+  font-size: 28px;
+}
+
+p {
+  color: $text-muted;
+  max-width: 60ch;
+}

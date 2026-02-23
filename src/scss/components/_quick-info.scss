@@ -1,0 +1,29 @@
+@use "../base/variables" as *;
+.quick-info {
+  background: #ffffff;
+
+  .info-box {
+    padding: 30px 20px;
+    border-radius: 14px;
+    background: $card-bg;
+    height: 100%;
+    transition: transform .3s ease, box-shadow .3s ease;
+
+    h3 {
+      color: $primary;
+      font-size: 20px;
+      margin-bottom: 8px;
+    }
+
+    p {
+      margin: 0;
+      font-size: 14px;
+      color: #555;
+    }
+
+    &:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 10px 25px rgba(0,0,0,.08);
+    }
+  }
+}

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Home – ABC College of Nursing</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+</head>
+<body>
+
+
+<header class="header">
+  <div class="container header-inner">
+
+    <div class="logo">ABC College of Nursing</div>
+
+    <input type="checkbox" id="menuToggle">
+    <label for="menuToggle" class="menu-icon">☰</label>
+
+   <nav class="main-nav">
+  <a href="/index.html" class="">Home</a>
+  <a href="/about.html" class="">About</a>
+  <a href="/courses.html" class="">Courses</a>
+  <a href="/admission.html" class="">Admission</a>
+  <a href="/contact.html" class="">Contact</a>
+</nav>
+
+  </div>
+</header>
+
+<div class="notice-bar">
+  <div class="container">
+   <strong>Notice:</strong>
+Admissions Open for Academic Year 2026–27.
+<a href="/admission.html">Apply Now</a>
+  </div>
+</div>
+
+
+<main>
+  
+<section class="hero hero-image">
+  <div class="container" data-aos="fade-up">
+    <h1>ABC College of Nursing</h1>
+    <p>
+      Recognised by Indian Nursing Council and State Nursing Council.<br>
+      Focused on clinical excellence, ethical practice and patient-centred care.
+    </p>
+  </div>
+</section>
+
+
+<section class="section light" data-aos="fade-up">
+  <div class="container two-col">
+
+    <div>
+      <h2>About the College</h2>
+
+      <p>
+        ABC College of Nursing is committed to preparing compassionate and
+        competent nursing professionals who are capable of meeting the
+        healthcare needs of individuals, families and communities.
+      </p>
+
+      <p>
+        The college provides structured clinical training through affiliated
+        hospitals and healthcare institutions, ensuring that students gain
+        real-world experience in patient care, nursing procedures and
+        professional practice.
+      </p>
+
+      <p>
+        Our academic environment emphasises ethical values, critical thinking,
+        communication skills and lifelong learning, enabling graduates to
+        perform confidently in diverse healthcare settings.
+      </p>
+    </div>
+
+    <div class="img-box" aria-hidden="true"></div>
+
+  </div>
+</section>
+
+
+<section class="section courses-home">
+  <div class="container">
+    <h2 class="center mb-5" data-aos="fade-up">Programmes Offered</h2>
+
+    <div class="row">
+
+      <div class="col-md-4 mb-4" data-aos="fade-up">
+        <div class="course-card">
+          <div class="course-icon">🩺</div>
+          <h4>GNM</h4>
+          <p>
+            General Nursing and Midwifery programme focused on clinical skills
+            and patient care.
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+        <div class="course-card">
+          <div class="course-icon">🏥</div>
+          <h4>B.Sc Nursing</h4>
+          <p>
+            Undergraduate programme in nursing education, leadership and
+            hospital practice.
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+        <div class="course-card">
+          <div class="course-icon">🎓</div>
+          <h4>Post Basic B.Sc Nursing</h4>
+          <p>
+            Advanced nursing programme for registered nurses to enhance
+            professional competence.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer" id="contact">
+  <div class="container footer-grid">
+
+    <div class="footer-col">
+      <p class="footer-title">ABC College of Nursing</p>
+      <p>Ahmedabad, Gujarat, India</p>
+      <p>
+        Email:
+        <a href="mailto:info@abccollege.ac.in">info@abccollege.ac.in</a>
+      </p>
+    </div>
+
+    <div class="footer-col">
+      <p class="footer-heading">Quick Links</p>
+      <ul class="footer-links">
+        <li><a href="/about.html">About Us</a></li>
+        <li><a href="/courses.html">Programmes</a></li>
+        <li><a href="/admission.html">Admissions</a></li>
+        <li><a href="/contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    © <span id="year"></span> ABC College of Nursing. All rights reserved.
+  </div>
+</footer>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({
+    once: true,
+    duration: 800,
+    easing: 'ease-out-cubic'
+  });
+</script>
+
+</body>
+</html>

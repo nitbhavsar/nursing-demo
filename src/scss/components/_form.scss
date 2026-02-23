@@ -1,0 +1,25 @@
+@use "../base/variables" as *;
+@use "sass:color";
+
+.form {
+  max-width: 400px;
+  margin: 25px auto 0;
+  display: grid;
+  gap: 12px;
+
+  input,
+  button {
+    padding: 12px;
+    font-size: 14px;
+  }
+
+  button {
+     background: $secondary;
+     color: #ffffff;
+    border: none;
+    cursor: pointer;
+    &:hover {
+    background: color.scale($secondary, $lightness: -8%);
+  }
+  }
+}

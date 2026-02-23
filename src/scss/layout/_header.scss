@@ -1,0 +1,120 @@
+@use "../base/variables" as *;
+
+.header {
+  background: $primary;
+  color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+
+  .header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 64px;
+  }
+
+  .logo {
+    font-weight: 600;
+    font-size: 18px;
+    letter-spacing: .3px;
+  }
+
+  /* ----------- DESKTOP NAV ----------- */
+
+  .main-nav {
+    display: flex;
+    gap: 28px;
+
+    a {
+      position: relative;
+      text-decoration: none;
+      color: #fff;
+      font-size: 15px;
+      font-weight: 500;
+      letter-spacing: .2px;
+      padding: 4px 0;
+      transition: color .2s ease;
+
+      &:hover {
+        color: $accent;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -6px;
+        width: 100%;
+        height: 2px;
+        background: $accent;
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform .25s ease;
+      }
+
+      &:hover::after {
+        transform: scaleX(1);
+      }
+
+      &.active {
+        color: $accent;
+      }
+
+      &.active::after {
+        transform: scaleX(1);
+      }
+    }
+  }
+
+  .menu-icon {
+    display: none;
+    font-size: 26px;
+    cursor: pointer;
+  }
+
+  #menuToggle {
+    display: none;
+  }
+}
+
+
+/* ---------------- MOBILE ---------------- */
+
+@media (max-width: 768px) {
+
+  .header {
+
+    .main-nav {
+      position: absolute;
+      top: 64px;
+      left: 0;
+      right: 0;
+      background: $primary;
+      flex-direction: column;
+      gap: 0;
+      display: none;
+
+      a {
+        padding: 14px 18px;
+
+        &::after {
+          display: none;   // no underline animation on mobile
+        }
+
+        &.active {
+          background: rgba(255, 255, 255, 0.06);
+          color: $accent;
+        }
+      }
+    }
+
+    #menuToggle:checked + .menu-icon + .main-nav {
+      display: flex;
+    }
+
+    .menu-icon {
+      display: block;
+    }
+  }
+}

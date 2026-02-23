@@ -1,0 +1,14 @@
+{
+  "name": "pharmacy-college-site",
+  "version": "1.0.0",
+  "scripts": {
+  "scss:watch": "sass --watch src/scss:dist/css",
+  "scss:build": "sass src/scss:dist/css --style=compressed",
+  "html:watch": "eleventy --serve",
+  "html:build": "eleventy"
+},
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.2",
+    "sass": "^1.71.0"
+  }
+}
