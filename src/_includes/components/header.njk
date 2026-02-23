@@ -1,0 +1,43 @@
+<header class="header">
+  <div class="header-inner">
+
+    <!-- Dynamic College Name -->
+     <div class="logo">
+
+      <img src="{{ college.logo }}" alt="{{ college.name }} Logo">
+      <span class="logo-text">{{ college.name }}</span>
+
+  </div>
+
+    <input type="checkbox" id="menuToggle">
+    <label for="menuToggle" class="menu-icon">☰</label>
+
+    <nav class="main-nav">
+      <a href="index.html"
+         class="{% if page.fileSlug == 'index' %}active{% endif %}">
+         Home
+      </a>
+
+      <a href="about.html"
+         class="{% if page.fileSlug == 'about' %}active{% endif %}">
+         About
+      </a>
+
+      <a href="courses.html"
+         class="{% if page.fileSlug == 'courses' %}active{% endif %}">
+         Courses
+      </a>
+
+      <a href="admission.html"
+         class="{% if page.fileSlug == 'admission' %}active{% endif %}">
+         Admission
+      </a>
+
+      <a href="contact.html"
+         class="{% if page.fileSlug == 'contact' %}active{% endif %}">
+         Contact
+      </a>
+    </nav>
+
+  </div>
+</header>

@@ -1,0 +1,44 @@
+<footer class="footer" id="contact">
+  <div class="container footer-grid">
+
+    <div class="footer-col">
+      <p class="footer-title">{{ college.name }}</p>
+
+      <p>
+        {{ college.address.line1 }}<br>
+        {{ college.address.line2 }}<br>
+        {{ college.address.area }}, {{ college.address.district }} - {{ college.address.pincode }}
+      </p>
+
+      <p>
+        Email:
+        <a href="mailto:{{ college.email }}">
+          {{ college.email }}
+        </a>
+      </p>
+
+      <p>
+        {% for phone in college.phones %}
+          <a href="tel:{{ phone | replace('-', '') }}">
+            {{ phone }}
+          </a>{% if not loop.last %} / {% endif %}
+        {% endfor %}
+      </p>
+    </div>
+
+    <div class="footer-col">
+      <p class="footer-heading">Quick Links</p>
+      <ul class="footer-links">
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="courses.html">Programmes</a></li>
+        <li><a href="admission.html">Admissions</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+     © {{ currentYear }} {{ college.name }}. All rights reserved.
+  </div>
+</footer>

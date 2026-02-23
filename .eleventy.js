@@ -1,13 +1,14 @@
 module.exports = function (eleventyConfig) {
 
-  eleventyConfig.addPassthroughCopy("images");
-
+  // Copy static assets
+  eleventyConfig.addPassthroughCopy("src/images");
+  eleventyConfig.addPassthroughCopy("src/css");
+eleventyConfig.addGlobalData("currentYear", new Date().getFullYear());
   return {
     dir: {
       input: "src",
-      output: "dist",
-      includes: "includes",
-      layouts: "layouts"
+      output: "docs",
+      includes: "_includes"
     }
   };
 };
