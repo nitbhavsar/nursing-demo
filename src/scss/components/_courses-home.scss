@@ -1,36 +1,72 @@
 @use "../base/variables" as *;
-.courses-home {
+.course-premium {
+  background: #ffffff;
+  padding: 60px;
+  border-radius: 24px;
+  box-shadow: 0 25px 60px rgba(0,0,0,0.06);
+}
 
-  .course-card {
-  background: $card-bg;
-  padding: 36px 28px;
-  border-radius: 14px;
+.course-points {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.course-points li {
+  margin-bottom: 12px;
+  padding-left: 22px;
+  position: relative;
+  color: $text-muted;
+}
+
+.course-points li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: $secondary;
+  font-weight: bold;
+}
+
+.course-stats {
+  background: $primary;
+  color: #fff;
+  border-radius: 18px;
+  padding: 40px;
   text-align: center;
-  height: 100%;
-  transition: all .3s ease;
-  box-shadow: 0 8px 30px rgba(0,0,0,.05);
+}
 
-    h4 {
-      margin-top: 15px;
-      margin-bottom: 10px;
-      color: #083b66;
-      font-size: 20px;
-      font-weight: 600;
-    }
+.stat-item {
+  margin-bottom: 30px;
+}
 
-    p {
-      font-size: 14px;
-      color: $primary;
-      margin: 0;
-    }
+.stat-item h3 {
+  font-size: 42px;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
 
-    &:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 14px 30px rgba(0,0,0,.08);
-    }
-  }
+.stat-item p {
+  font-size: 14px;
+  opacity: 0.85;
+  letter-spacing: 0.5px;
+  text-align: center;
+}
 
-  .course-icon {
-    font-size: 36px;
-  }
+.course-highlights {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.course-highlights li {
+  margin-bottom: 8px;
+}
+.courses-home {
+  padding: 80px 0;
+   background: #f8fbfb;
+}
+.stat-divider {
+  height: 1px;
+  background: rgba(255,255,255,0.15);
+  margin: 25px 0;
 }

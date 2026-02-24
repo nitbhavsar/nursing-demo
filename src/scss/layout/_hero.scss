@@ -2,58 +2,130 @@
 
 .hero {
   position: relative;
-  min-height: 70vh;
-
+  padding: 100px 0 80px;
   display: flex;
   align-items: center;
-  justify-content: center;
-
-  text-align: center;
   color: #fff;
   overflow: hidden;
-  padding: 0;   // remove old padding
-}
 
-
-.hero-image {
   background:
     linear-gradient(
-      rgba(15, 76, 92, 0.78),
-      rgba(15, 76, 92, 0.78)
+      110deg,
+      rgba(15, 76, 92, 0.92) 0%,
+      rgba(15, 76, 92, 0.80) 40%,
+      rgba(15, 76, 92, 0.65) 75%,
+      rgba(15, 76, 92, 0.55) 100%
     ),
     url("../images/hero-nursing.png") center / cover no-repeat;
 }
 
-.hero .container {
-  position: relative;
-  z-index: 2;
-  max-width: 820px;
+/* =============================
+   DESKTOP
+============================= */
+
+.hero-content {
+  max-width: 600px;
 }
 
 .hero h1 {
-  font-size: clamp(36px, 4vw, 52px);
-  line-height: 1.2;
-  margin-bottom: 14px;
+  font-size: clamp(38px, 4vw, 58px);
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  line-height: 1.1;
 }
 
 .hero p {
   font-size: 18px;
-  line-height: 1.6;
-  color: rgba(255,255,255,.95);
-   max-width: none;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
+  font-weight: 500;
+  color: rgba(255,255,255,0.95);
 }
 
-/* mobile */
-@media (max-width: 768px) {
+.btn-secondary {
+  background-color: $secondary;
+  border: none;
+}
+
+/* =============================
+   ENQUIRY CARD
+============================= */
+
+.enquiry-card {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 38px;
+  box-shadow: 0 40px 90px rgba(0, 0, 0, 0.28);
+}
+
+.enquiry-card .btn-primary {
+  background-color: $secondary;
+  border: none;
+  font-weight: 600;
+  padding: 14px;
+  border-radius: 8px;
+}
+
+.enquiry-card .btn-primary:hover {
+  background-color: darken($secondary, 7%);
+}
+
+/* =============================
+   TABLET (< 992px)
+============================= */
+
+@media (max-width: 991.98px) {
 
   .hero {
-    padding: 80px 0 70px;
+    min-height: auto;
+    padding: 100px 0 80px;
+  }
+
+  .hero-content {
+    text-align: center;
+    margin: 0 auto 50px;
+    max-width: 550px;
+  }
+
+  .hero h1 {
+    font-size: 36px;
   }
 
   .hero p {
     font-size: 16px;
+  }
+
+  .hero .btn {
+    min-width: 200px;
+  }
+
+  .enquiry-card {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+}
+
+/* =============================
+   MOBILE (< 576px)
+============================= */
+
+@media (max-width: 575.98px) {
+
+  .hero {
+    padding: 80px 0 60px;
+  }
+
+  .hero h1 {
+    font-size: 28px;
+  }
+
+  .hero p {
+    font-size: 15px;
+  }
+
+  .hero .btn {
+    width: 100%;
+  }
+
+  .enquiry-card {
+    padding: 24px;
   }
 }
