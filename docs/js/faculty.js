@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", async function () {
 
   try {
     const response = await fetch(
-      "_data/faculty.json?nocache=" + new Date().getTime(),
+      "./data/faculty.json?nocache=" + new Date().getTime(),
     );
     const data = await response.json();
     var delay = 0;
