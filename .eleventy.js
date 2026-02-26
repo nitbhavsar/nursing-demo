@@ -3,7 +3,9 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/images");
   eleventyConfig.addPassthroughCopy("src/css");
   eleventyConfig.addPassthroughCopy("src/js");
-  eleventyConfig.addPassthroughCopy("src/_data"); // if your faculty.json is here
+  eleventyConfig.addPassthroughCopy({
+    "src/_data": "data",
+  });
   eleventyConfig.addGlobalData("currentYear", new Date().getFullYear());
   return {
     dir: {
