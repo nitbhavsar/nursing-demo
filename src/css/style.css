@@ -275,6 +275,9 @@ p {
     padding: 24px;
   }
 }
+/* =================================
+   SECTION SYSTEM
+================================= */
 .section {
   padding: 110px 0;
 }
@@ -284,6 +287,38 @@ p {
   margin-bottom: 24px;
 }
 
+.section-sub {
+  font-size: 18px;
+  color: #5f7d86;
+  max-width: 650px;
+  margin: 0 auto;
+  line-height: 1.6;
+  text-align: center;
+}
+
+/* =================================
+   BACKGROUND SYSTEM
+================================= */
+.bg-white {
+  background: #ffffff;
+}
+
+.bg-soft {
+  background: #f8fbfb;
+}
+
+.bg-brand-light {
+  background: #eef7f8;
+}
+
+.bg-brand-dark {
+  background: #0f4c5c;
+  color: #ffffff;
+}
+
+/* =================================
+   ABOUT SECTION
+================================= */
 .two-col {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -303,25 +338,30 @@ p {
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
 }
 
-.why-us {
-  background: #eef7f8;
-}
-
-.feature-card {
-  position: relative;
+/* =================================
+   CARD SYSTEM
+================================= */
+.feature-card,
+.course-premium,
+.course-card {
   background: #ffffff;
   padding: 30px;
-  border-radius: 18px;
+  border-radius: 20px;
   height: 100%;
   box-shadow: 0 12px 35px rgba(0, 0, 0, 0.06);
   transition: 0.3s ease;
 }
 
-.feature-card:hover {
-  transform: translateY(-8px);
+.feature-card:hover,
+.course-premium:hover,
+.course-card:hover {
+  transform: translateY(-6px);
   box-shadow: 0 25px 60px rgba(0, 0, 0, 0.1);
 }
 
+/* =================================
+   ICON SYSTEM
+================================= */
 .icon-wrap {
   width: 65px;
   height: 65px;
@@ -333,31 +373,15 @@ p {
   margin: 0 auto 20px;
 }
 
-.why-choose {
-  background: #ffffff;
-  padding: 120px 0;
-}
-
-.infrastructure {
-  background: #eef7f8;
-}
-
-.section-sub {
-  font-size: 18px;
-  color: #5f7d86;
-  text-align: center;
-  margin: 0 auto;
-  line-height: 1.6;
-}
-
 .icon-wrap i {
   font-size: 26px;
   color: #2ec4b6;
 }
 
+/* =================================
+   CTA SECTION
+================================= */
 .cta-section {
-  background: #0f4c5c;
-  color: #fff;
   padding: 120px 0;
 }
 
@@ -365,11 +389,60 @@ p {
   color: rgba(255, 255, 255, 0.85);
 }
 
+/* =================================
+   RESPONSIVE
+================================= */
 @media (max-width: 768px) {
   .two-col {
     grid-template-columns: 1fr;
   }
 }
+.faculty-section {
+  background: #f8fbfc;
+}
+
+.faculty-card {
+  background: #ffffff;
+  padding: 22px;
+  border-radius: 14px;
+  text-align: center;
+  border: 1px solid #e8eef0;
+  transition: all 0.25s ease;
+}
+
+.faculty-card:hover {
+  border-color: #2ec4b6;
+  transform: translateY(-4px);
+}
+
+.faculty-avatar {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 14px;
+  background: rgba(46, 196, 182, 0.08);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.faculty-avatar i {
+  font-size: 20px;
+  color: #2ec4b6;
+}
+
+.faculty-name {
+  font-weight: 600;
+  font-size: 15px;
+  margin-bottom: 4px;
+}
+
+.faculty-role {
+  font-size: 13px;
+  color: #5f7d86;
+  display: block;
+}
+
 .footer {
   background: #0f4c5c;
   color: #fff;
