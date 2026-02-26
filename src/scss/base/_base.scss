@@ -1,7 +1,12 @@
 @use "./variables" as *;
 
 body {
-  font-family: "Source Sans 3", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family:
+    "Source Sans 3",
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    sans-serif;
   line-height: 1.7;
   font-size: 16px;
   color: $text-dark;
@@ -10,10 +15,18 @@ body {
 
 /* Headings – softer and more human */
 
-h1, h2, h3, h4 {
-  font-family: "Nunito", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+h1,
+h2,
+h3,
+h4 {
+  font-family:
+    "Nunito",
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    sans-serif;
   font-weight: 700;
-  letter-spacing: .2px;
+  letter-spacing: 0.2px;
 }
 
 h1 {
@@ -26,5 +39,4 @@ h2 {
 
 p {
   color: $text-muted;
-  text-align: justify;
 }

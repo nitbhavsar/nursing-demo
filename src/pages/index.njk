@@ -310,7 +310,10 @@ permalink: /index.html
 
   </div>
 </section>
+
+
 <section class="section bg-brand-light faculty-section">
+  
   <div class="container">
 
     <div class="text-center mb-5">
@@ -320,29 +323,7 @@ permalink: /index.html
       </p>
     </div>
 
-    <div class="row g-4">
-
-      {% for member in faculty %}
-      <div class="col-md-6 col-lg-3">
-        <div class="faculty-card">
-
-          <div class="faculty-avatar">
-            <i class="fas fa-user"></i>
-          </div>
-
-          <h6 class="faculty-name">
-            {{ member.name }}
-          </h6>
-
-          <span class="faculty-role">
-            {{ member.designation }}
-          </span>
-
-        </div>
-      </div>
-      {% endfor %}
-
-    </div>
+    <div id="faculty-container" class="row g-4"></div>
 
   </div>
 </section>

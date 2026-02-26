@@ -1,0 +1,16 @@
+{
+  "name": "Merchant Institute of Nursing",
+  "city": "Mehsana",
+  "established": "2012",
+  "email": "director.merchantnursing@gmail.com",
+  "phones": ["+91-9723706182", "+91-9723706186"],
+  "address": {
+    "line1": "Merchant Education Campus",
+    "line2": "Mehsana - Visnagar Highway",
+    "area": "Basna",
+    "pincode": "384315",
+    "district": "Mehsana"
+  },
+  "logo": "https://merchantpharmacy.ac.in/logo2.png",
+  "favicon": "https://merchantpharmacy.ac.in/logo2.png"
+}
