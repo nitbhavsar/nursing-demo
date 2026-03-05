@@ -1,44 +1,119 @@
 <footer class="footer" id="contact">
-  <div class="container footer-grid">
 
-    <div class="footer-col">
-      <p class="footer-title">{{ college.name }}</p>
+<div class="container footer-grid">
 
-      <p>
-        {{ college.address.line1 }}<br>
-        {{ college.address.line2 }}<br>
-        {{ college.address.area }}, {{ college.address.district }} - {{ college.address.pincode }}
-      </p>
+<!-- College Info -->
+<div class="footer-col footer-about">
 
-      <p>
-        Email:
-        <a href="mailto:{{ college.email }}">
-          {{ college.email }}
-        </a>
-      </p>
+<img src="{{ college.logo }}" alt="{{ college.name }}">
 
-      <p>
-        {% for phone in college.phones %}
-          <a href="tel:{{ phone | replace('-', '') }}">
-            {{ phone }}
-          </a>{% if not loop.last %} / {% endif %}
-        {% endfor %}
-      </p>
-    </div>
+<p class="footer-title">{{ college.name }}</p>
 
-    <div class="footer-col">
-      <p class="footer-heading">Quick Links</p>
-      <ul class="footer-links">
-        <li><a href="about.html">About Us</a></li>
-        <li><a href="courses.html">Programmes</a></li>
-        <li><a href="admission.html">Admissions</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </div>
+<p>
+{{ college.address.line1 }}<br>
+{{ college.address.line2 }}<br>
+{{ college.address.area }}, {{ college.address.district }} - {{ college.address.pincode }}
+</p>
 
-  </div>
+</div>
 
-  <div class="footer-bottom">
-     © {{ currentYear }} {{ college.name }}. All rights reserved.
-  </div>
+
+<!-- Quick Links -->
+<div class="footer-col">
+
+<p class="footer-heading">Quick Links</p>
+
+<ul class="footer-links">
+<li><a href="/about">About Us</a></li>
+<li><a href="/courses">Programmes</a></li>
+<li><a href="/admission">Admissions</a></li>
+<li><a href="/contact">Contact</a></li>
+</ul>
+
+</div>
+
+
+<!-- Programs -->
+<div class="footer-col">
+
+<p class="footer-heading">Programmes</p>
+
+<ul class="footer-links">
+<li><a href="#">B.Sc Nursing</a></li>
+<li><a href="#">GNM</a></li>
+<li><a href="#">ANM</a></li>
+</ul>
+
+</div>
+
+
+<!-- Contact -->
+<div class="footer-col">
+
+<p class="footer-heading">Contact</p>
+<div class="footer-social">
+<i class="fa-brands fa-facebook"></i>
+<i class="fa-brands fa-instagram"></i>
+<i class="fa-brands fa-youtube"></i>
+</div>
+<p>
+<i class="fa-solid fa-envelope"></i>
+<a href="mailto:{{ college.email }}">
+{{ college.email }}
+</a>
+</p>
+
+<p>
+<i class="fa-solid fa-phone"></i>
+
+{% for phone in college.phones %}
+<a href="tel:{{ phone | replace('-', '') }}">
+{{ phone }}
+</a>{% if not loop.last %} / {% endif %}
+{% endfor %}
+
+</p>
+
+</div>
+
+</div>
+
+
+<div class="footer-bottom">
+© {{ currentYear }} {{ college.name }}. All rights reserved.
+</div>
+<section class="affiliations">
+
+<div class="container">
+
+<p class="affiliation-title">Recognised & Affiliated With</p>
+
+<div class="affiliation-items">
+
+<div class="affiliation">
+<i class="fa-solid fa-user-nurse"></i>
+<p>Indian Nursing Council</p>
+</div>
+
+<div class="affiliation">
+<i class="fa-solid fa-building-columns"></i>
+<p>Affiliated University</p>
+</div>
+
+<div class="affiliation">
+<i class="fa-solid fa-hospital"></i>
+<p>Teaching Hospital</p>
+</div>
+
+<div class="affiliation">
+<i class="fa-solid fa-certificate"></i>
+<p>State Nursing Council</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
 </footer>

@@ -32,48 +32,81 @@
 <body>
 
 <header class="header">
-  <div class="header-inner">
+  <div class="container nav-wrapper">
+    <div class="logo">
+      <img src="https://merchantpharmacy.ac.in/logo2.png" alt="Merchant Institute of Nursing" />
+      <span>Merchant Institute of Nursing</span>
+    </div>
+    <input type="checkbox" id="nav-toggle" />
 
-    <!-- Dynamic College Name -->
-     <div class="logo">
+    <label for="nav-toggle" class="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+    <nav class="nav" id="navMenu">
+      <ul>
+        <li>
+          <a href="#"> <i class="fa-solid fa-house"></i> Home </a>
+        </li>
 
-      <img src="https://merchantpharmacy.ac.in/logo2.png" alt="Merchant Institute of Nursing Logo">
-      <span class="logo-text">Merchant Institute of Nursing</span>
+        <li>
+          <a href="#"> <i class="fa-solid fa-circle-info"></i> About </a>
+        </li>
 
-  </div>
+        <li class="dropdown">
+          <a href="#">
+            <i class="fa-solid fa-book"></i> Courses
+            <i class="fa-solid fa-angle-down"></i>
+          </a>
 
-    <input type="checkbox" id="menuToggle">
-    <label for="menuToggle" class="menu-icon">☰</label>
+          <ul class="dropdown-menu">
+            <li>
+              <a href="#">
+                <i class="fa-solid fa-user-nurse"></i> B.Sc Nursing
+              </a>
+            </li>
 
-    <nav class="main-nav">
-      <a href="index.html"
-         class="">
-         Home
-      </a>
+            <li>
+              <a href="#"> <i class="fa-solid fa-stethoscope"></i> GNM </a>
+            </li>
 
-      <a href="about.html"
-         class="">
-         About
-      </a>
+            <li>
+              <a href="#"> <i class="fa-solid fa-kit-medical"></i> ANM </a>
+            </li>
 
-      <a href="courses.html"
-         class="">
-         Courses
-      </a>
+            <li>
+              <a href="#">
+                <i class="fa-solid fa-graduation-cap"></i> Post Basic B.Sc
+              </a>
+            </li>
+          </ul>
+        </li>
 
-      <a href="admission.html"
-         class="">
-         Admission
-      </a>
+        <li>
+          <a href="#"> <i class="fa-solid fa-chalkboard-user"></i> Faculty </a>
+        </li>
 
-      <a href="contact.html"
-         class="">
-         Contact
-      </a>
+        <li>
+          <a href="#"> <i class="fa-solid fa-file-signature"></i> Admission </a>
+        </li>
+
+        <li>
+          <a href="#"> <i class="fa-solid fa-building"></i> Facilities </a>
+        </li>
+
+        <li>
+          <a href="#"> <i class="fa-solid fa-image"></i> Gallery </a>
+        </li>
+
+        <li>
+          <a href="#"> <i class="fa-solid fa-envelope"></i> Contact </a>
+        </li>
+      </ul>
     </nav>
-
   </div>
 </header>
+
 
 
 <main>
@@ -337,61 +370,70 @@
   </div>
 </section>
 <section class="section bg-soft">
-  <div class="container">
+<div class="container">
 
-    <div class="text-center mb-5" data-aos="fade-up">
-      <h2>Bachelor of Science in Nursing (B.Sc. Nursing)</h2>
-      <p class="section-sub">
-        A four-year undergraduate programme designed to develop competent,
-        compassionate and career-ready nursing professionals.
-      </p>
-    </div>
-
-    <div class="course-premium" data-aos="fade-up" data-aos-delay="100">
-
-      <div class="row align-items-center">
-
-        <!-- Left Content -->
-        <div class="col-lg-7">
-          <h4 class="mb-3">Programme Overview</h4>
-
-          <ul class="course-points">
-            <li>Extensive Clinical & Hospital Training</li>
-            <li>Internship Integrated in Final Year</li>
-            <li>Approved by Govt. of Gujarat</li>
-            <li>Recognized by INC & GNC</li>
-            <li>Affiliated to HNGU</li>
-          </ul>
-
-          <div class="mt-4">
-            <a href="bsc-nursing.html" class="btn btn-outline-secondary">View Programme Details</a>
-          </div>
-        </div>
-
-        <!-- Right Highlight Panel -->
-        <div class="col-lg-5">
-          <div class="course-stats">
-
-           <div class="stat-item">
-  <h3>4 Years</h3>
-  <p>Full-Time Programme</p>
+<div class="text-center mb-5">
+<h2 class="fw-bold">Our Nursing Programs</h2>
+<p class="text-muted">Professional nursing education designed to prepare skilled healthcare professionals</p>
 </div>
 
-<div class="stat-divider"></div>
+<div class="row g-4">
 
-<div class="stat-item">
-  <h3>60 Seats</h3>
-  <p>Limited Annual Intake</p>
+<div class="col-md-6 col-lg-3">
+  <a href="courses/bsc-nursing.html" class="course-link">
+<div class="course-card text-center">
+<div class="course-icon">
+<i class="fa-solid fa-user-nurse"></i>
+</div>
+<h5>B.Sc. Nursing</h5>
+<p class="course-duration">4 Years</p>
+<p class="course-info">Eligibility: 10+2 Science</p>
+</div>
+</a>
 </div>
 
-          </div>
-        </div>
+<div class="col-md-6 col-lg-3">
+  <a href="courses/bsc-nursing.html" class="course-link">
+<div class="course-card text-center">
+<div class="course-icon">
+<i class="fa-solid fa-stethoscope"></i>
+</div>
+<h5>GNM</h5>
+<p class="course-duration">3 Years</p>
+<p class="course-info">Eligibility: 10+2</p>
+</div>
+</a>
+</div>
 
-      </div>
+<div class="col-md-6 col-lg-3">
+   <a href="courses/bsc-nursing.html" class="course-link">
+<div class="course-card text-center">
+<div class="course-icon">
+<i class="fa-solid fa-heart-pulse"></i>
+</div>
+<h5>ANM</h5>
+<p class="course-duration">2 Years</p>
+<p class="course-info">Eligibility: 10+2</p>
+</div>
+</a>
+</div>
 
-    </div>
+<div class="col-md-6 col-lg-3">
+    <a href="courses/bsc-nursing.html" class="course-link">
+<div class="course-card text-center">
+<div class="course-icon">
+<i class="fa-solid fa-notes-medical"></i>
+</div>
+<h5>Post Basic B.Sc.</h5>
+<p class="course-duration">2 Years</p>
+<p class="course-info">Eligibility: GNM Qualified</p>
+</div>
+</a>
+</div>
 
-  </div>
+</div>
+
+</div>
 </section>
 <section class="section admissions bg-white">
   <div class="container">    
@@ -455,52 +497,127 @@
 </main>
 
 <footer class="footer" id="contact">
-  <div class="container footer-grid">
 
-    <div class="footer-col">
-      <p class="footer-title">Merchant Institute of Nursing</p>
+<div class="container footer-grid">
 
-      <p>
-        Merchant Education Campus<br>
-        Mehsana - Visnagar Highway<br>
-        Basna, Mehsana - 384315
-      </p>
+<!-- College Info -->
+<div class="footer-col footer-about">
 
-      <p>
-        Email:
-        <a href="mailto:director.merchantnursing@gmail.com">
-          director.merchantnursing@gmail.com
-        </a>
-      </p>
+<img src="https://merchantpharmacy.ac.in/logo2.png" alt="Merchant Institute of Nursing">
 
-      <p>
-        
-          <a href="tel:+919723706182">
-            +91-9723706182
-          </a> / 
-        
-          <a href="tel:+919723706186">
-            +91-9723706186
-          </a>
-        
-      </p>
-    </div>
+<p class="footer-title">Merchant Institute of Nursing</p>
 
-    <div class="footer-col">
-      <p class="footer-heading">Quick Links</p>
-      <ul class="footer-links">
-        <li><a href="about.html">About Us</a></li>
-        <li><a href="courses.html">Programmes</a></li>
-        <li><a href="admission.html">Admissions</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </div>
+<p>
+Merchant Education Campus<br>
+Mehsana - Visnagar Highway<br>
+Basna, Mehsana - 384315
+</p>
 
-  </div>
+</div>
 
-  <div class="footer-bottom">
-     © 2026 Merchant Institute of Nursing. All rights reserved.
-  </div>
+
+<!-- Quick Links -->
+<div class="footer-col">
+
+<p class="footer-heading">Quick Links</p>
+
+<ul class="footer-links">
+<li><a href="/about">About Us</a></li>
+<li><a href="/courses">Programmes</a></li>
+<li><a href="/admission">Admissions</a></li>
+<li><a href="/contact">Contact</a></li>
+</ul>
+
+</div>
+
+
+<!-- Programs -->
+<div class="footer-col">
+
+<p class="footer-heading">Programmes</p>
+
+<ul class="footer-links">
+<li><a href="#">B.Sc Nursing</a></li>
+<li><a href="#">GNM</a></li>
+<li><a href="#">ANM</a></li>
+</ul>
+
+</div>
+
+
+<!-- Contact -->
+<div class="footer-col">
+
+<p class="footer-heading">Contact</p>
+<div class="footer-social">
+<i class="fa-brands fa-facebook"></i>
+<i class="fa-brands fa-instagram"></i>
+<i class="fa-brands fa-youtube"></i>
+</div>
+<p>
+<i class="fa-solid fa-envelope"></i>
+<a href="mailto:director.merchantnursing@gmail.com">
+director.merchantnursing@gmail.com
+</a>
+</p>
+
+<p>
+<i class="fa-solid fa-phone"></i>
+
+
+<a href="tel:+919723706182">
++91-9723706182
+</a> / 
+
+<a href="tel:+919723706186">
++91-9723706186
+</a>
+
+
+</p>
+
+</div>
+
+</div>
+
+
+<div class="footer-bottom">
+© 2026 Merchant Institute of Nursing. All rights reserved.
+</div>
+<section class="affiliations">
+
+<div class="container">
+
+<p class="affiliation-title">Recognised & Affiliated With</p>
+
+<div class="affiliation-items">
+
+<div class="affiliation">
+<i class="fa-solid fa-user-nurse"></i>
+<p>Indian Nursing Council</p>
+</div>
+
+<div class="affiliation">
+<i class="fa-solid fa-building-columns"></i>
+<p>Affiliated University</p>
+</div>
+
+<div class="affiliation">
+<i class="fa-solid fa-hospital"></i>
+<p>Teaching Hospital</p>
+</div>
+
+<div class="affiliation">
+<i class="fa-solid fa-certificate"></i>
+<p>State Nursing Council</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
 </footer>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>

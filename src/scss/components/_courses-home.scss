@@ -1,72 +1,62 @@
 @use "../base/variables" as *;
-.course-premium {
-  background: #ffffff;
-  padding: 60px;
-  border-radius: 24px;
-  box-shadow: 0 25px 60px rgba(0,0,0,0.06);
+
+.course-card {
+  background: #fff;
+  padding: 35px 25px;
+  border-radius: 12px;
+  border: 1px solid #eee;
+  transition: all 0.3s ease;
 }
 
-.course-points {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+.course-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
 }
 
-.course-points li {
-  margin-bottom: 12px;
-  padding-left: 22px;
-  position: relative;
-  color: $text-muted;
+.course-icon {
+  width: 70px;
+  height: 70px;
+  margin: auto;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #e8f2ff;
+  border-radius: 50%;
+  font-size: 30px;
+  color: #2ec4b6;
 }
 
-.course-points li::before {
-  content: "✓";
+.course-duration {
+  font-weight: 600;
+  color: #2ec4b6;
+  margin-bottom: 5px;
+}
+
+.course-info {
+  font-size: 14px;
+  color: #666;
+}
+.course-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+.course-card:hover .course-icon {
+  background: #2ec4b6;
+  color: #fff;
+}
+/* Bottom border animation */
+.course-card::after {
+  content: "";
   position: absolute;
   left: 0;
-  color: $secondary;
-  font-weight: bold;
+  bottom: 0;
+  width: 0;
+  height: 3px;
+  background: #2ec4b6;
+  transition: width 0.3s ease;
 }
-
-.course-stats {
-  background: $primary;
-  color: #fff;
-  border-radius: 18px;
-  padding: 40px;
-  text-align: center;
-}
-
-.stat-item {
-  margin-bottom: 30px;
-}
-
-.stat-item h3 {
-  font-size: 42px;
-  font-weight: 700;
-  margin-bottom: 6px;
-}
-
-.stat-item p {
-  font-size: 14px;
-  opacity: 0.85;
-  letter-spacing: 0.5px;
-  text-align: center;
-}
-
-.course-highlights {
-  list-style: none;
-  padding: 0;
-  margin: 20px 0;
-}
-
-.course-highlights li {
-  margin-bottom: 8px;
-}
-.courses-home {
-  padding: 80px 0;
-   background: #f8fbfb;
-}
-.stat-divider {
-  height: 1px;
-  background: rgba(255,255,255,0.15);
-  margin: 25px 0;
+.course-card:hover::after {
+  width: 100%;
 }
