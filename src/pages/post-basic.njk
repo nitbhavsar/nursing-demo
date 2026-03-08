@@ -7,13 +7,17 @@ permalink: /courses/post-basic/
 <section class="page-banner">
   <div class="container">
     <div class="banner-breadcrumb">
-      <a href="/">Home</a> <i class="fas fa-angle-right"></i>
-      <a href="/courses/">Courses</a> <i class="fas fa-angle-right"></i>
+      <a href="{{ '/' | url }}">Home</a> <i class="fas fa-angle-right"></i>
+      <a href="{{ '/courses/' | url }}">Courses</a>
+      <i class="fas fa-angle-right"></i>
       <span>Post Basic B.Sc.</span>
     </div>
     <span class="banner-eyebrow">Advanced Degree Program</span>
     <h1>Post Basic B.Sc. Nursing</h1>
-    <p>An advanced two-year degree for practising GNM nurses seeking to elevate their qualifications and career prospects.</p>
+    <p>
+      An advanced two-year degree for practising GNM nurses seeking to elevate
+      their qualifications and career prospects.
+    </p>
   </div>
 </section>
 
@@ -51,9 +55,7 @@ permalink: /courses/post-basic/
 <section class="section bg-white">
   <div class="container">
     <div class="row g-5">
-
       <div class="col-lg-8">
-
         <div class="course-content-block" data-aos="fade-up">
           <h2>About the Program</h2>
           <p>
@@ -108,20 +110,32 @@ permalink: /courses/post-basic/
         <div class="course-content-block" data-aos="fade-up">
           <h2>Career Opportunities</h2>
           <div class="career-grid">
-            <div class="career-item"><i class="fas fa-user-tie"></i><span>Nursing Supervisor</span></div>
-            <div class="career-item"><i class="fas fa-chalkboard-teacher"></i><span>Nursing Tutor / Educator</span></div>
-            <div class="career-item"><i class="fas fa-hospital-user"></i><span>Ward Manager</span></div>
-            <div class="career-item"><i class="fas fa-plane"></i><span>International Nursing</span></div>
-            <div class="career-item"><i class="fas fa-microscope"></i><span>Clinical Research</span></div>
-            <div class="career-item"><i class="fas fa-book-open"></i><span>Further Studies (M.Sc.)</span></div>
+            <div class="career-item">
+              <i class="fas fa-user-tie"></i><span>Nursing Supervisor</span>
+            </div>
+            <div class="career-item">
+              <i class="fas fa-chalkboard-teacher"></i
+              ><span>Nursing Tutor / Educator</span>
+            </div>
+            <div class="career-item">
+              <i class="fas fa-hospital-user"></i><span>Ward Manager</span>
+            </div>
+            <div class="career-item">
+              <i class="fas fa-plane"></i><span>International Nursing</span>
+            </div>
+            <div class="career-item">
+              <i class="fas fa-microscope"></i><span>Clinical Research</span>
+            </div>
+            <div class="career-item">
+              <i class="fas fa-book-open"></i
+              ><span>Further Studies (M.Sc.)</span>
+            </div>
           </div>
         </div>
-
       </div>
 
       <div class="col-lg-4">
         <div class="course-sidebar">
-
           <div class="sidebar-card" data-aos="fade-left">
             <h5>Program Details</h5>
             <ul class="sidebar-details">
@@ -132,28 +146,53 @@ permalink: /courses/post-basic/
               <li><span>University</span><strong>HNGU</strong></li>
               <li><span>Approved by</span><strong>INC &amp; GNC</strong></li>
             </ul>
-            <a href="/admission/" class="btn-primary w-100 mt-3 text-center">Apply Now</a>
+            <a
+              href="{{ '/admission/' | url }}"
+              class="btn-primary w-100 mt-3 text-center"
+              >Apply Now</a
+            >
           </div>
 
-          <div class="sidebar-card sidebar-card--contact" data-aos="fade-left" data-aos-delay="100">
+          <div
+            class="sidebar-card sidebar-card--contact"
+            data-aos="fade-left"
+            data-aos-delay="100"
+          >
             <h5>Admission Inquiry</h5>
             <p>Have questions about this program? Our team is here to help.</p>
-            <a href="tel:9723706169" class="sidebar-phone"><i class="fas fa-phone"></i> 97237 06169 / 81</a>
-            <a href="tel:9723706156" class="sidebar-phone"><i class="fas fa-phone"></i> 97237 06156 (Admin)</a>
+            <a href="tel:9723706169" class="sidebar-phone"
+              ><i class="fas fa-phone"></i> 97237 06169 / 81</a
+            >
+            <a href="tel:9723706156" class="sidebar-phone"
+              ><i class="fas fa-phone"></i> 97237 06156 (Admin)</a
+            >
           </div>
 
           <div class="sidebar-card" data-aos="fade-left" data-aos-delay="150">
             <h5>Other Programs</h5>
             <ul class="sidebar-programs">
-              <li><a href="/courses/bsc-nursing/"><i class="fas fa-user-nurse"></i> B.Sc. Nursing <em>4 Yrs · 60 Seats</em></a></li>
-              <li><a href="/courses/gnm/"><i class="fas fa-stethoscope"></i> G.N.M. <em>3 Yrs · 60 Seats</em></a></li>
-              <li><a href="/courses/anm/"><i class="fas fa-heart-pulse"></i> A.N.M. <em>2 Yrs · 40 Seats</em></a></li>
+              <li>
+                <a href="{{ '/courses/bsc-nursing/' | url }}">
+                  <i class="fas fa-user-nurse"></i> B.Sc. Nursing
+                  <em>4 Yrs · 60 Seats</em>
+                </a>
+              </li>
+              <li>
+                <a href="{{ '/courses/gnm/' | url }}">
+                  <i class="fas fa-stethoscope"></i> G.N.M.
+                  <em>3 Yrs · 60 Seats</em>
+                </a>
+              </li>
+              <li>
+                <a href="{{ '/courses/anm/' | url }}">
+                  <i class="fas fa-heart-pulse"></i> A.N.M.
+                  <em>2 Yrs · 40 Seats</em>
+                </a>
+              </li>
             </ul>
           </div>
-
         </div>
       </div>
-
     </div>
   </div>
 </section>
