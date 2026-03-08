@@ -1,0 +1,795 @@
+@use "../base/variables" as *;
+/* ============================================================
+   ADMISSION PAGE – Merchant Institute of Nursing
+   Uses project SCSS variables
+   ============================================================ */
+
+// Hard reset all lists inside admission page sections
+.elig-card ul,
+.doc-list,
+.intake-grid,
+.admission-steps {
+  list-style: none !important;
+  padding-left: 0 !important;
+  margin-left: 0 !important;
+
+  li::marker {
+    display: none;
+  }
+}
+
+/* ============================================================
+   1. INTAKE GRID
+   ============================================================ */
+.intake-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.2rem;
+
+  @media (max-width: 992px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media (max-width: $mobile) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.intake-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.4rem 1.6rem;
+  background: $card-bg;
+  border: 1px solid $border;
+  border-radius: 8px;
+  border-left: 4px solid $secondary;
+  transition:
+    box-shadow 0.25s,
+    transform 0.25s;
+  font-family: "Outfit", sans-serif;
+
+  &:hover {
+    box-shadow: 0 10px 32px rgba($primary, 0.09);
+    transform: translateY(-3px);
+  }
+
+  &__icon {
+    width: 46px;
+    height: 46px;
+    border-radius: 10px;
+    background: rgba($secondary, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+
+    i {
+      font-size: 1.2rem;
+      color: $primary;
+    }
+  }
+
+  &__body {
+    flex: 1;
+
+    h4 {
+      font-family: "Playfair Display", serif;
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: $text-dark;
+      margin-bottom: 2px;
+    }
+
+    p {
+      font-size: 0.72rem;
+      color: $text-muted;
+      margin: 0;
+      letter-spacing: 0.04em;
+    }
+  }
+
+  &__seats {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-shrink: 0;
+  }
+}
+
+.seats-num {
+  font-family: "Playfair Display", serif;
+  font-size: 2rem;
+  font-weight: 600;
+  color: $primary;
+  line-height: 1;
+}
+
+.seats-label {
+  font-size: 0.6rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: $text-muted;
+  margin-top: 2px;
+}
+
+/* ============================================================
+   2. ELIGIBILITY CARDS
+   ============================================================ */
+.elig-card {
+  background: $card-bg;
+  border: 1px solid $border;
+  border-radius: 8px;
+  padding: 1.6rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  font-family: "Outfit", sans-serif;
+  transition:
+    box-shadow 0.25s,
+    transform 0.25s;
+
+  &:hover {
+    box-shadow: 0 10px 32px rgba($primary, 0.08);
+    transform: translateY(-3px);
+  }
+
+  &__tag {
+    display: inline-block;
+    padding: 3px 12px;
+    background: rgba($secondary, 0.12);
+    color: $primary;
+    font-size: 0.65rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    border-radius: 2px;
+    margin-bottom: 1.1rem;
+
+    &--adv {
+      background: rgba($primary, 0.08);
+    }
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1.2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.55rem;
+    flex: 1;
+
+    li {
+      font-size: 0.84rem;
+      color: $text-dark;
+      line-height: 1.5;
+      padding-left: 14px;
+      position: relative;
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 7px;
+        width: 5px;
+        height: 5px;
+        border-radius: 50%;
+        background: $secondary;
+      }
+    }
+  }
+}
+
+.elig-link {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: $secondary;
+  text-decoration: none;
+  letter-spacing: 0.04em;
+  transition: color 0.2s;
+  margin-top: auto;
+
+  &:hover {
+    color: $primary;
+  }
+}
+
+/* ============================================================
+   3. ADMISSION STEPS
+   ============================================================ */
+.admission-steps {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+  position: relative;
+
+  @media (max-width: 992px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media (max-width: $mobile) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.adm-step {
+  padding: 0 1.5rem 2rem;
+  position: relative;
+  font-family: "Outfit", sans-serif;
+
+  // Horizontal connector line between steps
+  &__line {
+    position: absolute;
+    top: 28px;
+    left: calc(2rem + 28px);
+    right: 0;
+    height: 2px;
+    background: $border;
+    z-index: 0;
+
+    // Last step has no line
+    .adm-step:last-child & {
+      display: none;
+    }
+
+    @media (max-width: $mobile) {
+      display: none;
+    }
+  }
+
+  &__num {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: $primary;
+    color: #fff;
+    font-family: "Playfair Display", serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.2rem;
+    position: relative;
+    z-index: 1;
+    flex-shrink: 0;
+    box-shadow: 0 6px 20px rgba($primary, 0.25);
+  }
+
+  &__body {
+    h4 {
+      font-family: "Playfair Display", serif;
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: $text-dark;
+      margin-bottom: 0.6rem;
+    }
+
+    p {
+      font-size: 0.88rem;
+      color: $text-muted;
+      line-height: 1.75;
+      margin: 0;
+    }
+  }
+
+  @media (max-width: $mobile) {
+    padding: 0 0 1.8rem 0;
+    display: flex;
+    gap: 1.2rem;
+    align-items: flex-start;
+
+    &__num {
+      margin-bottom: 0;
+      flex-shrink: 0;
+    }
+    &__body {
+      padding-top: 0.6rem;
+    }
+  }
+}
+
+/* ============================================================
+   4. DOCUMENTS LIST
+   ============================================================ */
+.doc-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  font-family: "Outfit", sans-serif;
+
+  li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 0.9rem;
+    color: $text-dark;
+    padding: 0.7rem 1rem;
+    background: $bg-light;
+    border-radius: 6px;
+    border-left: 3px solid transparent;
+    transition:
+      border-color 0.2s,
+      background 0.2s;
+
+    i {
+      color: $secondary;
+      font-size: 0.85rem;
+      width: 16px;
+      text-align: center;
+      flex-shrink: 0;
+    }
+
+    &:hover {
+      border-left-color: $secondary;
+      background: rgba($secondary, 0.06);
+    }
+  }
+}
+
+/* ============================================================
+   5. ADMISSION CONTACT CARD
+   ============================================================ */
+.adm-contact-card {
+  background: $card-bg;
+  border: 1px solid $border;
+  border-radius: 10px;
+  padding: 2rem;
+  font-family: "Outfit", sans-serif;
+  box-shadow: 0 8px 32px rgba($primary, 0.07);
+
+  &__header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid $border;
+
+    i {
+      font-size: 1.4rem;
+      color: $secondary;
+    }
+
+    h4 {
+      font-family: "Playfair Display", serif;
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: $primary;
+      margin: 0;
+    }
+  }
+
+  > p {
+    font-size: 0.85rem;
+    color: $text-muted;
+    line-height: 1.7;
+    margin-bottom: 1.4rem;
+  }
+}
+
+.adm-contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 0.8rem 0;
+  border-bottom: 1px solid $border;
+  font-family: "Outfit", sans-serif;
+
+  &:last-of-type {
+    border-bottom: none;
+  }
+
+  &__icon {
+    width: 34px;
+    height: 34px;
+    border-radius: 8px;
+    background: rgba($secondary, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+
+    i {
+      font-size: 0.8rem;
+      color: $primary;
+    }
+  }
+
+  div {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+
+    strong {
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: $text-muted;
+    }
+
+    a,
+    span {
+      font-size: 0.88rem;
+      color: $text-dark;
+      text-decoration: none;
+      line-height: 1.5;
+    }
+
+    a:hover {
+      color: $secondary;
+    }
+  }
+}
+
+/* ============================================================
+   6. SCHOLARSHIP BANNER
+   ============================================================ */
+.scholarship-banner {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem 2.5rem;
+  background: rgba($secondary, 0.06);
+  border: 1px solid rgba($secondary, 0.2);
+  border-radius: 10px;
+  border-left: 5px solid $secondary;
+  font-family: "Outfit", sans-serif;
+
+  &__icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: rgba($secondary, 0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+
+    i {
+      font-size: 1.5rem;
+      color: $primary;
+    }
+  }
+
+  &__body {
+    flex: 1;
+
+    h3 {
+      font-family: "Playfair Display", serif;
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: $primary;
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      font-size: 0.88rem;
+      color: $text-muted;
+      line-height: 1.75;
+      margin: 0;
+    }
+  }
+
+  &__btn {
+    flex-shrink: 0;
+    white-space: nowrap;
+  }
+
+  @media (max-width: $mobile) {
+    flex-direction: column;
+    text-align: center;
+    padding: 1.5rem;
+
+    &__icon {
+      margin: 0 auto;
+    }
+    &__btn {
+      width: 100%;
+      justify-content: center;
+    }
+  }
+}
+
+/* ============================================================
+   7. SHARED HELPERS
+   ============================================================ */
+.bg-white {
+  background: $card-bg;
+}
+.bg-soft {
+  background: $bg-light;
+}
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0.7rem 1.6rem;
+  background: $primary;
+  color: #fff !important;
+  font-family: "Outfit", sans-serif;
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 2px;
+  border: none;
+  transition:
+    background 0.2s,
+    transform 0.2s;
+
+  &:hover {
+    background: #0a3340;
+    transform: translateY(-2px);
+  }
+  &.w-100 {
+    justify-content: center;
+  }
+}
+
+.btn-outline-teal {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0.7rem 1.6rem;
+  background: transparent;
+  color: $primary !important;
+  font-family: "Outfit", sans-serif;
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 2px;
+  border: 1.5px solid $primary;
+  transition:
+    background 0.2s,
+    color 0.2s;
+
+  &:hover {
+    background: $primary;
+    color: #fff !important;
+  }
+}
+
+.section-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.72rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: $secondary;
+  margin-bottom: 0.8rem;
+  font-family: "Outfit", sans-serif;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: $secondary;
+    border-radius: 2px;
+  }
+}
+
+.section-sub {
+  color: $text-muted;
+  max-width: 560px;
+  margin: 0.5rem auto 0;
+  font-size: 0.95rem;
+  line-height: 1.75;
+}
+
+/* ============================================================
+   8. INQUIRY FORM
+   ============================================================ */
+.inq-form-card {
+  background: $card-bg;
+  border: 1px solid $border;
+  border-radius: 10px;
+  padding: 2.2rem;
+  box-shadow: 0 8px 32px rgba($primary, 0.06);
+  font-family: "Outfit", sans-serif;
+
+  @media (max-width: $mobile) {
+    padding: 1.4rem;
+  }
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+
+  label {
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    color: $text-dark;
+
+    span {
+      color: $secondary;
+      margin-left: 2px;
+    }
+  }
+
+  input,
+  select,
+  textarea {
+    width: 100%;
+    padding: 0.65rem 0.9rem;
+    font-family: "Outfit", sans-serif;
+    font-size: 0.88rem;
+    color: $text-dark;
+    background: $bg-light;
+    border: 1.5px solid $border;
+    border-radius: 4px;
+    outline: none;
+    transition:
+      border-color 0.2s,
+      background 0.2s,
+      box-shadow 0.2s;
+    appearance: none;
+
+    &::placeholder {
+      color: rgba($text-muted, 0.6);
+    }
+
+    &:focus {
+      border-color: $secondary;
+      background: #fff;
+      box-shadow: 0 0 0 3px rgba($secondary, 0.12);
+    }
+
+    &:invalid:not(:placeholder-shown) {
+      border-color: #e74c3c;
+    }
+  }
+
+  select {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%235f7d86' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 0.9rem center;
+    padding-right: 2.2rem;
+    cursor: pointer;
+  }
+
+  textarea {
+    resize: vertical;
+    min-height: 110px;
+  }
+}
+
+.inq-submit-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0.8rem 2.2rem;
+  background: $primary;
+  color: #fff;
+  font-family: "Outfit", sans-serif;
+  font-size: 0.82rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+  transition:
+    background 0.2s,
+    transform 0.2s;
+  margin-top: 0.5rem;
+
+  &:hover {
+    background: #0a3340;
+    transform: translateY(-2px);
+  }
+
+  &:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+    transform: none;
+  }
+}
+
+.inq-note {
+  font-size: 0.72rem;
+  color: $text-muted;
+  margin-top: 0.7rem;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+
+  i {
+    color: $secondary;
+    font-size: 0.68rem;
+  }
+}
+
+// Success state
+.inq-success {
+  text-align: center;
+  padding: 3rem 2rem;
+  font-family: "Outfit", sans-serif;
+
+  &__icon {
+    font-size: 3rem;
+    color: $secondary;
+    margin-bottom: 1rem;
+  }
+
+  h4 {
+    font-family: "Playfair Display", serif;
+    font-size: 1.3rem;
+    color: $primary;
+    margin-bottom: 0.5rem;
+  }
+
+  p {
+    font-size: 0.9rem;
+    color: $text-muted;
+    line-height: 1.7;
+  }
+}
+
+// Left info list
+.inq-info-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.inq-info-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-family: "Outfit", sans-serif;
+
+  &__icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+    background: rgba($secondary, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+
+    i {
+      font-size: 0.8rem;
+      color: $primary;
+    }
+  }
+
+  div {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+
+    strong {
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: $text-muted;
+    }
+
+    a,
+    span {
+      font-size: 0.88rem;
+      color: $text-dark;
+      text-decoration: none;
+      line-height: 1.5;
+    }
+
+    a:hover {
+      color: $secondary;
+    }
+  }
+}

@@ -1,148 +1,406 @@
 @use "../base/variables" as *;
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+/* ============================================================
+   HEADER – Merchant Institute of Nursing
+   Bootstrap 5 navbar – CSS-only, no custom JS needed
+   Uses project SCSS variables
+   ============================================================ */
+
+/* ── 1. TOP BAR ─────────────────────────────────────────── */
+.header-topbar {
+  background: $primary;
+  padding: 7px 0;
+  font-family: "Outfit", sans-serif;
+  font-size: 0.75rem;
+  letter-spacing: 0.04em;
 }
 
-.header {
-  background: white;
-  border-bottom: 1px solid $border;
+.topbar-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: rgba(#fff, 0.72);
+  text-decoration: none;
+  transition: color 0.2s;
+
+  i {
+    color: $secondary;
+    font-size: 0.7rem;
+  }
+  &:hover {
+    color: #fff;
+  }
+}
+
+.topbar-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 3px 12px;
+  background: $secondary;
+  color: $primary !important;
+  font-weight: 600;
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 2px;
+  transition: background 0.2s;
+
+  &:hover {
+    background: #fff;
+  }
+}
+
+.site-header {
   position: sticky;
   top: 0;
-  z-index: 1000;
+  z-index: 1030;
+}
 
-  .container {
-    max-width: 1200px;
-    margin: auto;
-    padding: 10px 20px;
+/* ── 2. NAVBAR SHELL ────────────────────────────────────── */
+.site-navbar {
+  background: $card-bg !important;
+  border-bottom: 1px solid $border;
+  padding: 0;
+  font-family: "Outfit", sans-serif;
+  transition: box-shadow 0.3s;
+}
+
+/* ── 3. LOGO ─────────────────────────────────────────────── */
+.site-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  padding: 12px 0;
+
+  img {
+    height: 44px;
+    width: auto;
   }
 
-  .nav-wrapper {
+  &__text {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  .logo {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    color: $primary;
-
-    img {
-      height: 45px;
-    }
-  }
-
-  .nav {
-    ul {
-      display: flex;
-      list-style: none;
-      gap: 25px;
-
-      li {
-        position: relative;
-
-        a {
-          text-decoration: none;
-          color: $text;
-          font-weight: 500;
-        }
-      }
-    }
-  }
-
-  .hamburger {
-    display: none;
     flex-direction: column;
-    cursor: pointer;
+    line-height: 1.2;
 
-    span {
-      height: 3px;
-      width: 25px;
-      background: $text;
-      margin: 4px 0;
+    @media (max-width: 480px) {
+      display: none;
     }
   }
 
-  .dropdown {
-    position: relative;
+  &__name {
+    font-family: "Playfair Display", serif;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: $primary;
+  }
 
-    .dropdown-menu {
-      position: absolute;
-      top: 100%; // important: removes hover gap
-      left: 0;
-      background: white;
-      border: 1px solid $border;
-      min-width: 200px;
-      display: none;
+  &__sub {
+    font-size: 0.62rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: $text-muted;
+    margin-top: 1px;
+  }
+}
 
-      li {
-        padding: 10px 15px;
+/* ── 4. HAMBURGER TOGGLER ───────────────────────────────── */
+.site-toggler {
+  border: 1px solid $border !important;
+  border-radius: 4px !important;
+  padding: 6px 10px !important;
+  box-shadow: none !important;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
 
-        &:hover {
-          background: #f5f5f5;
-        }
-      }
+  // Hide Bootstrap's default icon
+  .navbar-toggler-icon {
+    display: none;
+  }
+
+  .toggler-bar {
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: $primary;
+    border-radius: 2px;
+    transition:
+      transform 0.3s,
+      opacity 0.3s;
+  }
+
+  // Animate to X when expanded
+  &[aria-expanded="true"] {
+    .toggler-bar:nth-child(1) {
+      transform: translateY(7px) rotate(45deg);
     }
-
-    &:hover {
-      .dropdown-menu {
-        display: block;
-      }
+    .toggler-bar:nth-child(2) {
+      opacity: 0;
+    }
+    .toggler-bar:nth-child(3) {
+      transform: translateY(-7px) rotate(-45deg);
     }
   }
 }
 
-#nav-toggle {
+/* ── 5. NAV LINKS ───────────────────────────────────────── */
+.site-nav-link {
+  font-size: 0.83rem !important;
+  font-weight: 500 !important;
+  color: $text-dark !important;
+  padding: 0.55rem 0.75rem !important;
+  position: relative;
+  transition: color 0.2s !important;
+
+  // Underline on hover/active – desktop only
+  @media (min-width: 992px) {
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 4px;
+      left: 0.75rem;
+      right: 0.75rem;
+      height: 2px;
+      background: $secondary;
+      border-radius: 2px;
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.25s;
+    }
+
+    &:hover,
+    &.active,
+    &[aria-expanded="true"] {
+      color: $primary !important;
+      &::after {
+        transform: scaleX(1);
+      }
+    }
+  }
+
+  // Mobile: simple border bottom
+  @media (max-width: 991px) {
+    border-bottom: 1px solid $border;
+    border-radius: 0 !important;
+    padding: 0.85rem 0 !important;
+
+    &:hover,
+    &.active {
+      color: $secondary !important;
+    }
+  }
+}
+
+// Remove underline animation from dropdown toggle (caret does the job)
+.dropdown-toggle.site-nav-link::after {
+  display: none; // remove Bootstrap's default caret pseudo
+}
+
+// Bootstrap dropdown caret replacement – use FA icon in HTML instead
+.site-nav-link.dropdown-toggle {
+  // gap between text and caret
+  display: inline-flex !important;
+  align-items: center;
+  gap: 4px;
+}
+
+/* ── 6. HOVER DROPDOWN – desktop only ──────────────────── */
+@media (min-width: 992px) {
+  // Extend the hover area downward to bridge the gap
+  .nav-item.dropdown {
+    padding-bottom: 12px;
+    margin-bottom: -12px;
+  }
+
+  .nav-item.dropdown:hover > .site-dropdown {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .nav-item.dropdown:hover > .dropdown-toggle {
+    color: $primary !important;
+  }
+
+  // Rotate caret icon on hover
+  .nav-item.dropdown:hover .nav-caret-icon {
+    transform: rotate(180deg);
+  }
+
+  .nav-caret-icon {
+    font-size: 0.65rem;
+    transition: transform 0.25s;
+    margin-left: 3px;
+  }
+}
+
+// Remove old caret button styles
+.nav-caret {
   display: none;
 }
 
-@media (max-width: $mobile) {
-  .header {
-    .hamburger {
-      display: flex;
-      cursor: pointer;
-      z-index: 1100;
+/* ── 7. DROPDOWN PANEL ──────────────────────────────────── */
+.site-dropdown {
+  border: 1px solid $border !important;
+  border-top: 3px solid $secondary !important;
+  border-radius: 4px !important;
+  box-shadow: 0 16px 48px rgba($primary, 0.13) !important;
+  padding: 0.4rem 0 !important;
+  min-width: 260px !important;
+  margin-top: 0 !important; // remove gap — bridge handles hover
+
+  // Desktop: centred below the nav item
+  @media (min-width: 992px) {
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+
+    // Invisible bridge fills the gap between link and panel
+    // so hover doesn't break when moving the mouse diagonally
+    &::after {
+      content: "";
+      position: absolute;
+      top: -12px;
+      left: 0;
+      right: 0;
+      height: 12px;
     }
 
-    .nav {
+    // Arrow pointer
+    &::before {
+      content: "";
       position: absolute;
-      top: 70px;
-      left: 0;
-      width: 100%;
-      background: white;
-      display: none;
+      top: -7px;
+      left: 50%;
+      transform: translateX(-50%);
+      border: 6px solid transparent;
+      border-bottom-color: $secondary;
+      border-top: none;
+      z-index: 1;
+    }
+  }
 
-      ul {
-        flex-direction: column;
-        padding: 20px;
-        gap: 15px;
+  // Mobile: full-width, flush, no shadow
+  @media (max-width: 991px) {
+    box-shadow: none !important;
+    border: none !important;
+    border-left: 3px solid rgba($secondary, 0.35) !important;
+    border-radius: 0 !important;
+    margin: 0.3rem 0 0.3rem 0.5rem !important;
+    padding: 0.2rem 0 !important;
+  }
+}
 
-        li {
-          .dropdown-menu {
-            position: static;
-            border: none;
-            display: none;
-          }
-        }
+/* ── 7. DROPDOWN ITEMS ──────────────────────────────────── */
+.site-dropdown-item {
+  display: flex !important;
+  align-items: center;
+  gap: 12px;
+  padding: 0.7rem 1.1rem !important;
+  transition: background 0.2s !important;
+
+  &:hover,
+  &:focus {
+    background: $bg-light !important;
+
+    .sdi-icon {
+      background: $secondary;
+      i {
+        color: #fff;
       }
     }
   }
 
-  /* toggle menu */
-
-  #nav-toggle:checked ~ .nav {
-    display: block;
+  // Mobile: hide icon squares to save space
+  @media (max-width: 991px) {
+    padding: 0.6rem 0.5rem !important;
+    .sdi-icon {
+      display: none;
+    }
   }
 }
-.nav a i {
-  margin-right: 6px;
-  font-size: 14px;
+
+.sdi-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  background: rgba($secondary, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: background 0.2s;
+
+  i {
+    font-size: 0.85rem;
+    color: $primary;
+    transition: color 0.2s;
+  }
 }
-.dropdown > a i:last-child {
-  margin-left: 5px;
-  font-size: 12px;
+
+.sdi-text {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+
+  strong {
+    font-family: "Outfit", sans-serif;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: $text-dark;
+  }
+
+  em {
+    font-style: normal;
+    font-size: 0.7rem;
+    letter-spacing: 0.05em;
+    color: $text-muted;
+  }
+}
+
+/* ── 8. CTA BUTTON ──────────────────────────────────────── */
+.nav-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.55rem 1.3rem;
+  background: $primary;
+  color: #fff !important;
+  font-family: "Outfit", sans-serif;
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 2px;
+  white-space: nowrap;
+  transition:
+    background 0.2s,
+    transform 0.2s;
+
+  &:hover {
+    background: $secondary;
+    color: $primary !important;
+    transform: translateY(-2px);
+  }
+
+  // Full width on mobile inside the collapsed menu
+  @media (max-width: 991px) {
+    display: block;
+    text-align: center;
+    margin-bottom: 1rem;
+    transform: none !important;
+  }
+}
+
+/* ── 9. MOBILE COLLAPSE PADDING ─────────────────────────── */
+@media (max-width: 991px) {
+  .navbar-collapse {
+    padding: 0.5rem 0 0;
+  }
+
+  .navbar-nav {
+    gap: 0 !important;
+  }
 }

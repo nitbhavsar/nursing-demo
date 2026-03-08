@@ -3,6 +3,14 @@ body {
   line-height: 1.6;
 }
 
+/* Global list reset — overrides Bootstrap reboot */
+ul,
+ol {
+  list-style: none !important;
+  padding-left: 0 !important;
+  margin: 0 !important;
+}
+
 /* common */
 
 .container {

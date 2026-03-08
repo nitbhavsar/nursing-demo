@@ -1,119 +1,178 @@
-<footer class="footer" id="contact">
+<footer class="site-footer" id="contact">
 
-<div class="container footer-grid">
+  {# ── Main footer grid ──────────────────────────────────── #}
+  <div class="footer-main">
+    <div class="container">
+      <div class="row g-5">
 
-<!-- College Info -->
-<div class="footer-col footer-about">
+        {# Col 1 – Brand / About #}
+        <div class="col-lg-4 col-md-6">
+          <div class="footer-brand">
+            <img src="{{ college.logo }}" alt="{{ college.name }}" class="footer-logo" />
+            <h5 class="footer-brand__name">{{ college.name }}</h5>
+            <p class="footer-brand__tagline">
+              Nurturing compassionate, skilled nursing professionals through
+              excellence in education and clinical training.
+            </p>
+            <address class="footer-address">
+              <i class="fas fa-map-marker-alt"></i>
+              <span>
+                {{ college.address.line1 }},
+                {{ college.address.line2 }},
+                {{ college.address.area }},
+                {{ college.address.district }} – {{ college.address.pincode }}
+              </span>
+            </address>
+          </div>
+        </div>
 
-<img src="{{ college.logo }}" alt="{{ college.name }}">
+        {# Col 2 – Quick Links #}
+        <div class="col-lg-2 col-md-6 col-6">
+          <div class="footer-col">
+            <h6 class="footer-col__heading">Quick Links</h6>
+            <ul class="footer-links">
+              <li><a href="/">Home</a></li>
+              <li><a href="/about/">About Us</a></li>
+              <li><a href="/courses/">Programmes</a></li>
+              <li><a href="/faculty/">Faculty</a></li>
+              <li><a href="/facilities/">Facilities</a></li>
+              <li><a href="/gallery/">Gallery</a></li>
+              <li><a href="/admission/">Admissions</a></li>
+              <li><a href="/contact/">Contact</a></li>
+            </ul>
+          </div>
+        </div>
 
-<p class="footer-title">{{ college.name }}</p>
+        {# Col 3 – Programmes #}
+        <div class="col-lg-2 col-md-6 col-6">
+          <div class="footer-col">
+            <h6 class="footer-col__heading">Programmes</h6>
+            <ul class="footer-links">
+              <li>
+                <a href="/courses/bsc-nursing/">
+                  B.Sc. Nursing
+                  <em>4 Yrs · 60 Seats</em>
+                </a>
+              </li>
+              <li>
+                <a href="/courses/gnm/">
+                  G.N.M.
+                  <em>3 Yrs · 60 Seats</em>
+                </a>
+              </li>
+              <li>
+                <a href="/courses/anm/">
+                  A.N.M.
+                  <em>2 Yrs · 40 Seats</em>
+                </a>
+              </li>
+              <li>
+                <a href="/courses/post-basic/">
+                  Post Basic B.Sc.
+                  <em>2 Yrs · 50 Seats</em>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
 
-<p>
-{{ college.address.line1 }}<br>
-{{ college.address.line2 }}<br>
-{{ college.address.area }}, {{ college.address.district }} - {{ college.address.pincode }}
-</p>
+        {# Col 4 – Contact #}
+        <div class="col-lg-4 col-md-6">
+          <div class="footer-col">
+            <h6 class="footer-col__heading">Get In Touch</h6>
 
-</div>
+            <ul class="footer-contact-list">
+              <li>
+                <span class="fci"><i class="fas fa-phone"></i></span>
+                <span>
+                  Admin:
+                  <a href="tel:9723706156">97237 06156</a>
+                </span>
+              </li>
+              <li>
+                <span class="fci"><i class="fas fa-phone-volume"></i></span>
+                <span>
+                  Admissions:
+                  <a href="tel:9723706169">97237 06169</a> /
+                  <a href="tel:9723706181">81</a>
+                </span>
+              </li>
+              <li>
+                <span class="fci"><i class="fas fa-envelope"></i></span>
+                <span>
+                  <a href="mailto:{{ college.email }}">{{ college.email }}</a>
+                </span>
+              </li>
+              <li>
+                <span class="fci"><i class="fas fa-map-marker-alt"></i></span>
+                <span>Piludara, Mehsana, Gujarat</span>
+              </li>
+            </ul>
 
+            {# Social icons #}
+            <div class="footer-social">
+              <a href="#" class="footer-social__link" aria-label="Facebook">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="#" class="footer-social__link" aria-label="Instagram">
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a href="#" class="footer-social__link" aria-label="YouTube">
+                <i class="fab fa-youtube"></i>
+              </a>
+            </div>
 
-<!-- Quick Links -->
-<div class="footer-col">
+          </div>
+        </div>
 
-<p class="footer-heading">Quick Links</p>
+      </div>
+    </div>
+  </div>
 
-<ul class="footer-links">
-<li><a href="/about">About Us</a></li>
-<li><a href="/courses">Programmes</a></li>
-<li><a href="/admission">Admissions</a></li>
-<li><a href="/contact">Contact</a></li>
-</ul>
+  {# ── Affiliations bar ──────────────────────────────────── #}
+  <div class="footer-affiliations">
+    <div class="container">
+      <p class="footer-affiliations__label">Recognised &amp; Affiliated With</p>
+      <div class="footer-affiliations__items">
 
-</div>
+        <div class="affil-item">
+          <i class="fas fa-university"></i>
+          <span>H.N.G.U.</span>
+        </div>
 
+        <div class="affil-divider"></div>
 
-<!-- Programs -->
-<div class="footer-col">
+        <div class="affil-item">
+          <i class="fas fa-certificate"></i>
+          <span>Gujarat Nursing Council</span>
+        </div>
 
-<p class="footer-heading">Programmes</p>
+        <div class="affil-divider"></div>
 
-<ul class="footer-links">
-<li><a href="#">B.Sc Nursing</a></li>
-<li><a href="#">GNM</a></li>
-<li><a href="#">ANM</a></li>
-</ul>
+        <div class="affil-item">
+          <i class="fas fa-user-nurse"></i>
+          <span>Indian Nursing Council</span>
+        </div>
 
-</div>
+        <div class="affil-divider"></div>
 
+        <div class="affil-item">
+          <i class="fas fa-building-columns"></i>
+          <span>Govt. of Gujarat</span>
+        </div>
 
-<!-- Contact -->
-<div class="footer-col">
+      </div>
+    </div>
+  </div>
 
-<p class="footer-heading">Contact</p>
-<div class="footer-social">
-<i class="fa-brands fa-facebook"></i>
-<i class="fa-brands fa-instagram"></i>
-<i class="fa-brands fa-youtube"></i>
-</div>
-<p>
-<i class="fa-solid fa-envelope"></i>
-<a href="mailto:{{ college.email }}">
-{{ college.email }}
-</a>
-</p>
-
-<p>
-<i class="fa-solid fa-phone"></i>
-
-{% for phone in college.phones %}
-<a href="tel:{{ phone | replace('-', '') }}">
-{{ phone }}
-</a>{% if not loop.last %} / {% endif %}
-{% endfor %}
-
-</p>
-
-</div>
-
-</div>
-
-
-<div class="footer-bottom">
-© {{ currentYear }} {{ college.name }}. All rights reserved.
-</div>
-<section class="affiliations">
-
-<div class="container">
-
-<p class="affiliation-title">Recognised & Affiliated With</p>
-
-<div class="affiliation-items">
-
-<div class="affiliation">
-<i class="fa-solid fa-user-nurse"></i>
-<p>Indian Nursing Council</p>
-</div>
-
-<div class="affiliation">
-<i class="fa-solid fa-building-columns"></i>
-<p>Affiliated University</p>
-</div>
-
-<div class="affiliation">
-<i class="fa-solid fa-hospital"></i>
-<p>Teaching Hospital</p>
-</div>
-
-<div class="affiliation">
-<i class="fa-solid fa-certificate"></i>
-<p>State Nursing Council</p>
-</div>
-
-</div>
-
-</div>
-
-</section>
+  {# ── Bottom bar ────────────────────────────────────────── #}
+  <div class="footer-bottom">
+    <div class="container">
+      <div class="footer-bottom__inner">
+        <p>© {{ currentYear }} {{ college.name }}. All rights reserved.</p>
+        <p>Managed by <strong>Merchant Education Trust, Visnagar</strong></p>
+      </div>
+    </div>
+  </div>
 
 </footer>

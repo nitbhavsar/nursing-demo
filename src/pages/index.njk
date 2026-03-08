@@ -1,331 +1,378 @@
 ---
 layout: layouts/base.njk
-title: Home
+title: Merchant Institute of Nursing – Piludara
 permalink: /index.html
 ---
 
+{# ── HERO ──────────────────────────────────────────────────── #}
+<section class="home-hero">
+  <div class="home-hero__bg"></div>
+  <div class="home-hero__overlay"></div>
 
-{% include "components/hero.njk" %}
+  <div class="home-hero__content container">
+    <span class="home-hero__eyebrow">Est. 2022 · Piludara, Gujarat</span>
 
-<section class="section bg-white">
-  <div class="container two-col" >
-  <div data-aos="fade-right">
-  <h2>About the College</h2>
-  <p>
-    {{ college.name }}, managed by Merchant Education Campus, is affiliated to
-    Hemchandracharya North Gujarat University (HNGU) and recognized by the
-    Government of Gujarat, Indian Nursing Council (New Delhi) and Gujarat Nursing Council.
-  </p>
-  <p>
-    We prepare skilled, ethical and compassionate nursing professionals through
-    strong academic foundations and extensive clinical training in hospitals and
-    community healthcare environments.
-  </p>
+    <h1 class="home-hero__title" data-aos="fade-up">
+      Shaping the Future<br>of <em>Healthcare<br>Excellence</em>
+    </h1>
 
-  <a href="#" class="btn btn-outline-secondary mt-3">
-    Learn More
-  </a>
-</div>
-    <div class="img-box" data-aos="fade-left" data-aos-delay="150" aria-hidden="true"></div>
+    <p class="home-hero__sub" data-aos="fade-up" data-aos-delay="120">
+      Merchant Institute of Nursing – Piludara prepares skilled, ethical
+      and compassionate nursing professionals through world-class academic
+      foundations and extensive clinical training.
+    </p>
+
+    <div class="home-hero__actions" data-aos="fade-up" data-aos-delay="240">
+      <a href="/admission/" class="btn-primary">Apply for Admission</a>
+      <a href="/about/" class="btn-ghost">Discover Our Story</a>
+    </div>
+
+    <div class="home-hero__badges" data-aos="fade-up" data-aos-delay="360">
+      <div class="hero-badge-pill"><i class="fas fa-university"></i> HNGU Affiliated</div>
+      <div class="hero-badge-pill"><i class="fas fa-certificate"></i> GNC Recognised</div>
+      <div class="hero-badge-pill"><i class="fas fa-building-columns"></i> Govt. of Gujarat</div>
+    </div>
+  </div>
+
+  <div class="home-hero__stats">
+    <div class="container">
+      <div class="hero-stats-bar">
+        <div class="hero-stat">
+          <span class="hero-stat__num">30+</span>
+          <span class="hero-stat__label">Acre Campus</span>
+        </div>
+        <div class="hero-stat-divider"></div>
+        <div class="hero-stat">
+          <span class="hero-stat__num">4</span>
+          <span class="hero-stat__label">Programs</span>
+        </div>
+        <div class="hero-stat-divider"></div>
+        <div class="hero-stat">
+          <span class="hero-stat__num">210+</span>
+          <span class="hero-stat__label">Total Seats</span>
+        </div>
+        <div class="hero-stat-divider"></div>
+        <div class="hero-stat">
+          <span class="hero-stat__num">2022</span>
+          <span class="hero-stat__label">Established</span>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
+
+{# ── ABOUT PREVIEW ─────────────────────────────────────────── #}
+<section class="section bg-white">
+  <div class="container two-col">
+
+    <div data-aos="fade-right">
+      <span class="section-eyebrow">Who We Are</span>
+      <h2>About Merchant Institute of Nursing</h2>
+      <p>
+        Merchant Institute of Nursing – Piludara, managed by
+        <strong>Merchant Education Trust, Visnagar</strong>, is affiliated to
+        Hemchandracharya North Gujarat University (HNGU) and recognised by the
+        Government of Gujarat and Gujarat Nursing Council.
+      </p>
+      <p>
+        We prepare skilled, ethical and compassionate nursing professionals
+        through strong academic foundations and extensive clinical training
+        in hospitals and community healthcare environments.
+      </p>
+      <a href="/about/" class="btn-primary mt-3">Learn More About Us</a>
+    </div>
+
+    <div class="img-box" data-aos="fade-left" data-aos-delay="150" aria-hidden="true"></div>
+
+  </div>
+</section>
+
+{# ── VISION & MISSION ──────────────────────────────────────── #}
+<section class="section bg-soft">
+  <div class="container">
+    <div class="row g-4">
+
+      <div class="col-md-6" data-aos="fade-up">
+        <div class="vm-card h-100">
+          <i class="fa-solid fa-eye"></i>
+          <h3>Our Vision</h3>
+          <p>
+            To be a center of excellence in nursing education by developing
+            highly skilled, ethical, and compassionate nursing professionals
+            who serve society with dedication and care.
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-6" data-aos="fade-up" data-aos-delay="150">
+        <div class="vm-card h-100">
+          <i class="fa-solid fa-bullseye"></i>
+          <h3>Our Mission</h3>
+          <ul>
+            <li>Provide quality theoretical and practical nursing education</li>
+            <li>Promote critical thinking and professional development</li>
+            <li>Offer hospital and community-based clinical exposure</li>
+            <li>Develop confident and competent nursing professionals</li>
+            <li>Produce efficient nurses who meet modern healthcare standards</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+{# ── PROGRAMS ──────────────────────────────────────────────── #}
+<section class="section bg-white">
+  <div class="container">
+
+    <div class="text-center mb-5" data-aos="fade-up">
+      <span class="section-eyebrow">Academic Programs</span>
+      <h2>Our Nursing Programs</h2>
+      <p class="section-sub">
+        Professional nursing education designed to prepare skilled, career-ready healthcare professionals.
+      </p>
+    </div>
+
+    <div class="row g-4">
+
+      <div class="col-md-6 col-lg-3" data-aos="fade-up">
+        <a href="/courses/bsc-nursing/" class="course-link">
+          <div class="course-card text-center">
+            <div class="course-icon"><i class="fa-solid fa-user-nurse"></i></div>
+            <h5>B.Sc. Nursing</h5>
+            <p class="course-duration">4 Years</p>
+            <p class="course-info">Eligibility: 10+2 Science</p>
+            <p class="course-seats">60 Seats</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
+        <a href="/courses/gnm/" class="course-link">
+          <div class="course-card text-center">
+            <div class="course-icon"><i class="fa-solid fa-stethoscope"></i></div>
+            <h5>G.N.M.</h5>
+            <p class="course-duration">3 Years</p>
+            <p class="course-info">Eligibility: 10+2</p>
+            <p class="course-seats">60 Seats</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
+        <a href="/courses/anm/" class="course-link">
+          <div class="course-card text-center">
+            <div class="course-icon"><i class="fa-solid fa-heart-pulse"></i></div>
+            <h5>A.N.M.</h5>
+            <p class="course-duration">2 Years</p>
+            <p class="course-info">Eligibility: 10+2</p>
+            <p class="course-seats">40 Seats</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
+        <a href="/courses/post-basic/" class="course-link">
+          <div class="course-card text-center">
+            <div class="course-icon"><i class="fa-solid fa-notes-medical"></i></div>
+            <h5>Post Basic B.Sc.</h5>
+            <p class="course-duration">2 Years</p>
+            <p class="course-info">Eligibility: GNM Qualified</p>
+            <p class="course-seats">50 Seats</p>
+          </div>
+        </a>
+      </div>
+
+    </div>
+
+    <div class="text-center mt-5" data-aos="fade-up">
+      <a href="/courses/" class="btn-primary">View All Programs</a>
+    </div>
+
+  </div>
+</section>
+
+{# ── WHY CHOOSE US ─────────────────────────────────────────── #}
 <section class="section bg-brand-light">
   <div class="container">
 
     <div class="text-center mb-5" data-aos="fade-up">
+      <span class="section-eyebrow">Our Strengths</span>
       <h2>Why Choose Merchant Nursing College?</h2>
       <p class="section-sub">
-        A commitment to academic excellence, professional integrity and career-ready clinical training.
+        A commitment to academic excellence, professional integrity, and career-ready clinical training.
       </p>
     </div>
 
     <div class="row g-4">
-
-      <!-- Recognition -->
-      <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="0">
+      <div class="col-md-6 col-lg-4" data-aos="fade-up">
         <div class="feature-card text-center">
-          <div class="icon-wrap">
-            <i class="fas fa-award"></i>
-          </div>
-          <h5>Recognized & Accredited</h5>
-          <p>Affiliated to HNGU and recognized by Government of Gujarat, INC and Gujarat Nursing Council.</p>
+          <div class="icon-wrap"><i class="fas fa-award"></i></div>
+          <h5>Recognised &amp; Accredited</h5>
+          <p>Affiliated to HNGU and recognised by Govt. of Gujarat, INC and Gujarat Nursing Council.</p>
         </div>
       </div>
-
-      <!-- Faculty -->
       <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
         <div class="feature-card text-center">
-          <div class="icon-wrap">
-            <i class="fas fa-user-graduate"></i>
-          </div>
+          <div class="icon-wrap"><i class="fas fa-user-graduate"></i></div>
           <h5>Experienced Faculty</h5>
-          <p>Dedicated educators and clinical mentors guiding academic and professional growth.</p>
+          <p>Dedicated educators and clinical mentors guiding academic and professional growth at every step.</p>
         </div>
       </div>
-
-      <!-- Clinical Exposure -->
       <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
         <div class="feature-card text-center">
-          <div class="icon-wrap">
-            <i class="fas fa-hospital"></i>
-          </div>
+          <div class="icon-wrap"><i class="fas fa-hospital"></i></div>
           <h5>Extensive Clinical Exposure</h5>
-          <p>Hands-on training in hospitals, specialty units and community healthcare environments.</p>
+          <p>Hands-on training in hospitals, specialty units, and community healthcare environments.</p>
         </div>
       </div>
-
-      <!-- Holistic Development -->
       <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
         <div class="feature-card text-center">
-          <div class="icon-wrap">
-            <i class="fas fa-hand-holding-heart"></i>
-          </div>
+          <div class="icon-wrap"><i class="fas fa-hand-holding-heart"></i></div>
           <h5>Holistic Development</h5>
-          <p>Focus on ethics, leadership skills and compassionate patient care.</p>
+          <p>Focus on ethics, leadership skills, and compassionate patient care beyond academics.</p>
         </div>
       </div>
-
-      <!-- Structured Training -->
       <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="400">
         <div class="feature-card text-center">
-          <div class="icon-wrap">
-            <i class="fas fa-clipboard-check"></i>
-          </div>
+          <div class="icon-wrap"><i class="fas fa-clipboard-check"></i></div>
           <h5>Structured Academic Framework</h5>
           <p>Well-designed curriculum aligned with regulatory standards and professional demands.</p>
         </div>
       </div>
-
-      <!-- Career Readiness -->
       <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="500">
         <div class="feature-card text-center">
-          <div class="icon-wrap">
-            <i class="fas fa-briefcase-medical"></i>
-          </div>
+          <div class="icon-wrap"><i class="fas fa-briefcase-medical"></i></div>
           <h5>Career-Oriented Approach</h5>
-          <p>Preparing students for confident entry into hospitals, specialty care and public health sectors.</p>
+          <p>Preparing students for confident entry into hospitals, specialty care, and public health.</p>
         </div>
       </div>
-
     </div>
 
   </div>
 </section>
+
+{# ── FACILITIES PREVIEW ────────────────────────────────────── #}
 <section class="section bg-white">
   <div class="container">
 
     <div class="text-center mb-5" data-aos="fade-up">
-        <h2>Infrastructure & Clinical Facilities</h2>
-        <p class="section-sub">
-         Well-equipped laboratories and advanced clinical training environments to support comprehensive nursing education.
-        </p>
-    </div>
-
-    <div class="row g-4">
-
-      <!-- Anatomy Lab -->
-      <div class="col-md-6 col-lg-3" data-aos="zoom-in" data-aos-delay="0">
-        <div class="feature-card text-center">
-          <div class="icon-wrap">
-            <i class="fas fa-dna"></i>
-          </div>
-          <h5>Anatomy Lab</h5>
-        </div>
-      </div>
-
-      <!-- Biochemistry & Microbiology Lab -->
-      <div class="col-md-6 col-lg-3" data-aos="zoom-in" data-aos-delay="100">
-        <div class="feature-card text-center">
-          <div class="icon-wrap">
-            <i class="fas fa-flask"></i>
-          </div>
-          <h5>Biochemistry & Microbiology Lab</h5>
-        </div>
-      </div>
-
-      <!-- Library -->
-      <div class="col-md-6 col-lg-3" data-aos="zoom-in" data-aos-delay="200">
-        <div class="feature-card text-center">
-          <div class="icon-wrap">
-            <i class="fas fa-book-medical"></i>
-          </div>
-          <h5>Modern Library</h5>
-        </div>
-      </div>
-
-      <!-- Mental Health Lab -->
-      <div class="col-md-6 col-lg-3" data-aos="zoom-in" data-aos-delay="300">
-        <div class="feature-card text-center">
-          <div class="icon-wrap">
-            <i class="fas fa-brain"></i>
-          </div>
-          <h5>Mental Health Lab</h5>
-        </div>
-      </div>
-
-      <!-- Nutrition Lab -->
-      <div class="col-md-6 col-lg-3" data-aos="zoom-in" data-aos-delay="400">
-        <div class="feature-card text-center">
-          <div class="icon-wrap">
-            <i class="fas fa-apple-whole"></i>
-          </div>
-          <h5>Nutrition Lab</h5>
-        </div>
-      </div>
-
-      <!-- Emergency Care -->
-      <div class="col-md-6 col-lg-3" data-aos="zoom-in" data-aos-delay="500">
-        <div class="feature-card text-center">
-          <div class="icon-wrap">
-            <i class="fas fa-ambulance"></i>
-          </div>
-          <h5>Emergency Care Training</h5>
-        </div>
-      </div>
-
-      <!-- Oncology -->
-      <div class="col-md-6 col-lg-3" data-aos="zoom-in" data-aos-delay="600">
-        <div class="feature-card text-center">
-          <div class="icon-wrap">
-            <i class="fas fa-ribbon"></i>
-          </div>
-          <h5>Oncology Training</h5>
-        </div>
-      </div>
-
-      <!-- Cardiology -->
-      <div class="col-md-6 col-lg-3" data-aos="zoom-in" data-aos-delay="700">
-        <div class="feature-card text-center">
-          <div class="icon-wrap">
-            <i class="fas fa-heart-pulse"></i>
-          </div>
-          <h5>Cardiology Training</h5>
-        </div>
-      </div>
-
-    </div>
-<div class="text-center mt-5">
-  <a href="facilities.html" class="btn btn-outline-secondary">
-    View All Facilities
-  </a>
-</div>
-  </div>
-</section>
-<section class="section bg-soft">
-<div class="container">
-
-<div class="text-center mb-5">
-<h2 class="fw-bold">Our Nursing Programs</h2>
-<p class="text-muted">Professional nursing education designed to prepare skilled healthcare professionals</p>
-</div>
-
-<div class="row g-4">
-
-<div class="col-md-6 col-lg-3">
-  <a href="courses/bsc-nursing.html" class="course-link">
-<div class="course-card text-center">
-<div class="course-icon">
-<i class="fa-solid fa-user-nurse"></i>
-</div>
-<h5>B.Sc. Nursing</h5>
-<p class="course-duration">4 Years</p>
-<p class="course-info">Eligibility: 10+2 Science</p>
-</div>
-</a>
-</div>
-
-<div class="col-md-6 col-lg-3">
-  <a href="courses/bsc-nursing.html" class="course-link">
-<div class="course-card text-center">
-<div class="course-icon">
-<i class="fa-solid fa-stethoscope"></i>
-</div>
-<h5>GNM</h5>
-<p class="course-duration">3 Years</p>
-<p class="course-info">Eligibility: 10+2</p>
-</div>
-</a>
-</div>
-
-<div class="col-md-6 col-lg-3">
-   <a href="courses/bsc-nursing.html" class="course-link">
-<div class="course-card text-center">
-<div class="course-icon">
-<i class="fa-solid fa-heart-pulse"></i>
-</div>
-<h5>ANM</h5>
-<p class="course-duration">2 Years</p>
-<p class="course-info">Eligibility: 10+2</p>
-</div>
-</a>
-</div>
-
-<div class="col-md-6 col-lg-3">
-    <a href="courses/bsc-nursing.html" class="course-link">
-<div class="course-card text-center">
-<div class="course-icon">
-<i class="fa-solid fa-notes-medical"></i>
-</div>
-<h5>Post Basic B.Sc.</h5>
-<p class="course-duration">2 Years</p>
-<p class="course-info">Eligibility: GNM Qualified</p>
-</div>
-</a>
-</div>
-
-</div>
-
-</div>
-</section>
-<section class="section admissions bg-white">
-  <div class="container">    
-    <div class="text-center mb-5" data-aos="fade-up">
-      <h2>Admissions Overview</h2>
+      <span class="section-eyebrow">Infrastructure</span>
+      <h2>Facilities &amp; Clinical Labs</h2>
       <p class="section-sub">
-        Key eligibility and admission details for B.Sc. Nursing programme.
+        Well-equipped laboratories and advanced clinical training environments
+        supporting comprehensive nursing education.
       </p>
     </div>
 
     <div class="row g-4">
-
-      <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+      <div class="col-md-6 col-lg-3" data-aos="zoom-in">
         <div class="feature-card text-center">
-          <h5>Eligibility</h5>
-          <p>Minimum 45% in PCB (40% for reserved categories).</p>
+          <div class="icon-wrap"><i class="fas fa-dna"></i></div>
+          <h5>Anatomy Lab</h5>
         </div>
       </div>
-
-      <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+      <div class="col-md-6 col-lg-3" data-aos="zoom-in" data-aos-delay="100">
         <div class="feature-card text-center">
-          <h5>Minimum Age</h5>
-          <p>17 years as on 31st December of admission year.</p>
+          <div class="icon-wrap"><i class="fas fa-flask"></i></div>
+          <h5>Biochemistry &amp; Microbiology Lab</h5>
         </div>
       </div>
-
-      <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+      <div class="col-md-6 col-lg-3" data-aos="zoom-in" data-aos-delay="200">
         <div class="feature-card text-center">
-          <h5>Intake Capacity</h5>
-          <p>Total 60 seats per academic year.</p>
+          <div class="icon-wrap"><i class="fas fa-book-medical"></i></div>
+          <h5>Modern Library</h5>
         </div>
       </div>
-
+      <div class="col-md-6 col-lg-3" data-aos="zoom-in" data-aos-delay="300">
+        <div class="feature-card text-center">
+          <div class="icon-wrap"><i class="fas fa-brain"></i></div>
+          <h5>Mental Health Lab</h5>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3" data-aos="zoom-in" data-aos-delay="400">
+        <div class="feature-card text-center">
+          <div class="icon-wrap"><i class="fas fa-apple-whole"></i></div>
+          <h5>Nutrition Lab</h5>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3" data-aos="zoom-in" data-aos-delay="500">
+        <div class="feature-card text-center">
+          <div class="icon-wrap"><i class="fas fa-ambulance"></i></div>
+          <h5>Emergency Care Training</h5>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3" data-aos="zoom-in" data-aos-delay="600">
+        <div class="feature-card text-center">
+          <div class="icon-wrap"><i class="fas fa-ribbon"></i></div>
+          <h5>Oncology Training</h5>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3" data-aos="zoom-in" data-aos-delay="700">
+        <div class="feature-card text-center">
+          <div class="icon-wrap"><i class="fas fa-heart-pulse"></i></div>
+          <h5>Cardiology Training</h5>
+        </div>
+      </div>
     </div>
 
-    <div class="text-center mt-5">
-      <a href="bsc-nursing.html" class="btn btn-secondary">
-        View Complete Admission Details
-      </a>
+    <div class="text-center mt-5" data-aos="fade-up">
+      <a href="/facilities/" class="btn-outline">View All Facilities</a>
     </div>
 
   </div>
 </section>
 
-
-<section class="section bg-brand-light faculty-section">
-  
+{# ── ADMISSIONS OVERVIEW ───────────────────────────────────── #}
+<section class="section admissions bg-soft">
   <div class="container">
 
-    <div class="text-center mb-5">
+    <div class="text-center mb-5" data-aos="fade-up">
+      <span class="section-eyebrow">Admissions 2025–26</span>
+      <h2>Admissions Overview</h2>
+      <p class="section-sub">
+        Key eligibility and admission details for our nursing programmes.
+      </p>
+    </div>
+
+    <div class="row g-4">
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+        <div class="feature-card text-center">
+          <div class="icon-wrap"><i class="fas fa-graduation-cap"></i></div>
+          <h5>Eligibility</h5>
+          <p>Minimum 45% in PCB (40% for reserved categories). 10+2 from recognised board.</p>
+        </div>
+      </div>
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+        <div class="feature-card text-center">
+          <div class="icon-wrap"><i class="fas fa-calendar-check"></i></div>
+          <h5>Minimum Age</h5>
+          <p>17 years as on 31st December of the admission year.</p>
+        </div>
+      </div>
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+        <div class="feature-card text-center">
+          <div class="icon-wrap"><i class="fas fa-users"></i></div>
+          <h5>Total Intake</h5>
+          <p>210+ seats across all four programmes — B.Sc., GNM, ANM and Post Basic B.Sc.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="text-center mt-5" data-aos="fade-up">
+      <a href="/admission/" class="btn-primary">View Complete Admission Details</a>
+    </div>
+
+  </div>
+</section>
+
+{# ── FACULTY ───────────────────────────────────────────────── #}
+<section class="section bg-brand-light faculty-section">
+  <div class="container">
+
+    <div class="text-center mb-5" data-aos="fade-up">
+      <span class="section-eyebrow">Meet the Team</span>
       <h2>Our Faculty</h2>
       <p class="section-sub">
         Experienced and dedicated educators guiding future nursing professionals.
@@ -333,6 +380,49 @@ permalink: /index.html
     </div>
 
     <div id="faculty-container" class="row g-4"></div>
+
+  </div>
+</section>
+
+{# ── CAMPUS STRIP ──────────────────────────────────────────── #}
+<section class="campus-strip">
+  <div class="campus-strip__overlay"></div>
+  <div class="container campus-strip__content">
+    <div data-aos="fade-right">
+      <h2>30+ Acres of Learning &amp; Growth</h2>
+      <p>
+        Contemporary laboratories, a modern auditorium, recreational facilities
+        and a vibrant, diverse student community — all in one inspiring campus
+        at Piludara, Gujarat.
+      </p>
+      <a href="/about/" class="btn-ghost">Explore Campus</a>
+    </div>
+  </div>
+</section>
+
+{# ── HOME CTA ──────────────────────────────────────────────── #}
+<section class="section home-cta">
+  <div class="container text-center">
+
+    <h2 data-aos="fade-up">Begin Your Journey in Nursing Excellence</h2>
+    <p data-aos="fade-up" data-aos-delay="100">
+      Join Merchant Institute of Nursing – Piludara and become a skilled,
+      compassionate healthcare professional who makes a real difference.
+    </p>
+
+    <div class="cta-actions" data-aos="fade-up" data-aos-delay="200">
+      <a href="/admission/" class="btn-primary btn-lg">Apply for Admission</a>
+      <a href="tel:9723706169" class="btn-outline btn-lg">
+        <i class="fa-solid fa-phone"></i> Call for Inquiry
+      </a>
+    </div>
+
+    <p class="cta-contact" data-aos="fade-up" data-aos-delay="300">
+      <i class="fa-solid fa-phone-volume"></i>
+      Admin: <a href="tel:9723706156">97237 06156</a> &nbsp;|&nbsp;
+      Admissions: <a href="tel:9723706169">97237 06169</a> /
+      <a href="tel:9723706181">81</a>
+    </p>
 
   </div>
 </section>
