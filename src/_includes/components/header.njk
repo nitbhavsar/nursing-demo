@@ -18,7 +18,7 @@
           <span class="topbar-item">
             <i class="fas fa-map-marker-alt"></i> Piludara, Gujarat
           </span>
-          <a href="/admission/" class="topbar-cta">
+          <a href="{{ '/admission/' | url }}" class="topbar-cta">
             Apply Now <i class="fas fa-arrow-right ms-1"></i>
           </a>
         </div>
@@ -32,7 +32,7 @@
     <div class="container">
 
       {# Logo #}
-      <a class="navbar-brand site-logo" href="/">
+      <a class="navbar-brand site-logo" href="{{ '/' | url }}">
         <img src="{{ college.logo }}" alt="{{ college.name }}" height="44" />
         <div class="site-logo__text">
           <span class="site-logo__name">{{ college.name }}</span>
@@ -60,24 +60,24 @@
         <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1">
 
           <li class="nav-item">
-            <a href="/" class="nav-link site-nav-link">Home</a>
+            <a href="{{ '/' | url }}" class="nav-link site-nav-link">Home</a>
           </li>
 
           <li class="nav-item">
-            <a href="/about/" class="nav-link site-nav-link">About</a>
+            <a href="{{ '/about/' | url }}" class="nav-link site-nav-link">About</a>
           </li>
 
           {# Courses dropdown – Bootstrap 5 native #}
           <li class="nav-item dropdown">
             <a
-              href="/courses/"
+              href="{{ '/courses/' | url }}"
               class="nav-link site-nav-link"
             >
               Courses <i class="fa-solid fa-angle-down nav-caret-icon"></i>
             </a>
             <ul class="dropdown-menu site-dropdown">
               <li>
-                <a href="/courses/bsc-nursing/" class="dropdown-item site-dropdown-item">
+                <a href="{{ '/courses/bsc-nursing/' | url }}" class="dropdown-item site-dropdown-item">
                   <span class="sdi-icon"><i class="fa-solid fa-user-nurse"></i></span>
                   <span class="sdi-text">
                     <strong>B.Sc. Nursing</strong>
@@ -86,7 +86,7 @@
                 </a>
               </li>
               <li>
-                <a href="/courses/gnm/" class="dropdown-item site-dropdown-item">
+                <a href="{{ '/courses/gnm/' | url }}" class="dropdown-item site-dropdown-item">
                   <span class="sdi-icon"><i class="fa-solid fa-stethoscope"></i></span>
                   <span class="sdi-text">
                     <strong>G.N.M.</strong>
@@ -95,7 +95,7 @@
                 </a>
               </li>
               <li>
-                <a href="/courses/anm/" class="dropdown-item site-dropdown-item">
+                <a href="{{ '/courses/anm/' | url }}" class="dropdown-item site-dropdown-item">
                   <span class="sdi-icon"><i class="fa-solid fa-heart-pulse"></i></span>
                   <span class="sdi-text">
                     <strong>A.N.M.</strong>
@@ -104,7 +104,7 @@
                 </a>
               </li>
               <li>
-                <a href="/courses/post-basic/" class="dropdown-item site-dropdown-item">
+                <a href="{{ '/courses/post-basic/' | url }}" class="dropdown-item site-dropdown-item">
                   <span class="sdi-icon"><i class="fa-solid fa-graduation-cap"></i></span>
                   <span class="sdi-text">
                     <strong>Post Basic B.Sc.</strong>
@@ -116,28 +116,28 @@
           </li>
 
           <li class="nav-item">
-            <a href="/faculty/" class="nav-link site-nav-link">Faculty</a>
+            <a href="{{ '/faculty/' | url }}" class="nav-link site-nav-link">Faculty</a>
           </li>
 
           <li class="nav-item">
-            <a href="/admission/" class="nav-link site-nav-link">Admission</a>
+            <a href="{{ '/admission/' | url }}" class="nav-link site-nav-link">Admission</a>
           </li>
 
           <li class="nav-item">
-            <a href="/facilities/" class="nav-link site-nav-link">Facilities</a>
+            <a href="{{ '/facilities/' | url }}" class="nav-link site-nav-link">Facilities</a>
           </li>
 
           <li class="nav-item">
-            <a href="/gallery/" class="nav-link site-nav-link">Gallery</a>
+            <a href="{{ '/gallery/' | url }}" class="nav-link site-nav-link">Gallery</a>
           </li>
 
           <li class="nav-item">
-            <a href="/contact/" class="nav-link site-nav-link">Contact</a>
+            <a href="{{ '/contact/' | url }}" class="nav-link site-nav-link">Contact</a>
           </li>
 
           {# CTA – shown inline on desktop, full-width on mobile #}
           <li class="nav-item ms-lg-2 mt-3 mt-lg-0">
-            <a href="/admission/" class="nav-cta-btn">Apply Now</a>
+            <a href="{{ '/admission/' | url }}" class="nav-cta-btn">Apply Now</a>
           </li>
 
         </ul>

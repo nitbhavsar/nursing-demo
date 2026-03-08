@@ -8,6 +8,7 @@ module.exports = function (eleventyConfig) {
   });
   eleventyConfig.addGlobalData("currentYear", new Date().getFullYear());
   return {
+    pathPrefix: "/nursing-demo/",
     dir: {
       input: "src",
       output: "docs",
