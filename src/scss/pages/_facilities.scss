@@ -1,0 +1,386 @@
+@use "../base/variables" as *;
+
+/* ============================================================
+   FACILITIES PAGE – Merchant Institute of Nursing
+   ============================================================ */
+
+/* ── Stats Bar ─────────────────────────────────────────────── */
+.fac-stats-bar {
+  background: $bg-light;
+  border-bottom: 1px solid $border;
+  font-family: "Outfit", sans-serif;
+}
+
+.fac-stats-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 20px 0;
+}
+
+.fac-stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 3rem;
+  gap: 2px;
+
+  @media (max-width: $mobile) {
+    padding: 0.5rem 1.5rem;
+  }
+}
+
+.fac-stat-num {
+  font-family: "Playfair Display", serif;
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: $primary;
+  line-height: 1;
+}
+
+.fac-stat-label {
+  font-size: 0.65rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: $text-muted;
+}
+
+.fac-stat-divider {
+  width: 1px;
+  height: 36px;
+  background: $border;
+
+  @media (max-width: $mobile) {
+    display: none;
+  }
+}
+
+/* ── Section Layout ────────────────────────────────────────── */
+.fac-section {
+  padding: 90px 0;
+
+  @media (max-width: $mobile) {
+    padding: 60px 0;
+  }
+}
+
+/* ── Lab Number Tag ────────────────────────────────────────── */
+.fac-lab-num {
+  display: inline-block;
+  font-family: "Playfair Display", serif;
+  font-size: 3rem;
+  font-weight: 600;
+  color: rgba($secondary, 0.2);
+  line-height: 1;
+  margin-bottom: -0.5rem;
+
+  &--sm {
+    font-size: 2rem;
+    margin-bottom: 0.2rem;
+  }
+}
+
+/* ── Eyebrow ───────────────────────────────────────────────── */
+.fac-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: "Outfit", sans-serif;
+  font-size: 0.68rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: $secondary;
+  margin-bottom: 0.6rem;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: $secondary;
+    border-radius: 2px;
+  }
+}
+
+/* ── Section headings ──────────────────────────────────────── */
+.fac-section h2 {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(1.6rem, 2.5vw, 2.2rem);
+  font-weight: 400;
+  color: $text-dark;
+  margin-bottom: 1rem;
+  line-height: 1.25;
+}
+
+.fac-section p {
+  font-family: "Outfit", sans-serif;
+  font-size: 0.93rem;
+  color: $text-muted;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+}
+
+/* ── Feature list ──────────────────────────────────────────── */
+.fac-feature-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  font-family: "Outfit", sans-serif;
+}
+
+.fac-feature-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 0.86rem;
+  color: $text-dark;
+  line-height: 1.6;
+
+  i {
+    color: $secondary;
+    font-size: 0.75rem;
+    flex-shrink: 0;
+    margin-top: 3px;
+  }
+}
+
+/* ── Image wrapper ─────────────────────────────────────────── */
+.fac-img-wrap {
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba($primary, 0.12);
+
+  img {
+    width: 100%;
+    height: 360px;
+    object-fit: cover;
+    display: block;
+    background: $bg-light;
+  }
+
+  // Placeholder when image is missing
+  &:not(:has(img[src*="."]))::after,
+  img[src$=".jpg"]:not([src*="/"]) {
+    background: $bg-light;
+  }
+
+  @media (max-width: $mobile) {
+    img {
+      height: 240px;
+    }
+  }
+}
+
+.fac-img-badge {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: $primary;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  box-shadow: 0 4px 16px rgba($primary, 0.4);
+
+  i {
+    color: $secondary;
+    font-size: 1.1rem;
+  }
+}
+
+// Teal corner accent on image
+.fac-img-wrap::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(to right, $secondary, rgba($secondary, 0));
+  z-index: 1;
+}
+
+/* ── Digital Facilities Cards ──────────────────────────────── */
+.fac-card {
+  background: $card-bg;
+  border: 1px solid $border;
+  border-radius: 10px;
+  padding: 2rem;
+  height: 100%;
+  font-family: "Outfit", sans-serif;
+  transition:
+    box-shadow 0.3s,
+    transform 0.3s;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(to right, $primary, $secondary);
+    border-radius: 10px 10px 0 0;
+  }
+
+  &:hover {
+    box-shadow: 0 16px 48px rgba($primary, 0.1);
+    transform: translateY(-4px);
+  }
+}
+
+.fac-card-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 12px;
+  background: rgba($secondary, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.2rem;
+
+  i {
+    font-size: 1.3rem;
+    color: $primary;
+  }
+}
+
+.fac-card-body {
+  h3 {
+    font-family: "Playfair Display", serif;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: $text-dark;
+    margin-bottom: 0.5rem;
+  }
+
+  p {
+    font-size: 0.85rem;
+    color: $text-muted;
+    line-height: 1.7;
+    margin-bottom: 1.2rem;
+  }
+}
+
+.fac-card-features {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid $border;
+
+  span {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    font-size: 0.8rem;
+    color: $text-dark;
+    line-height: 1.5;
+
+    i {
+      color: $secondary;
+      font-size: 0.45rem;
+      flex-shrink: 0;
+      margin-top: 5px;
+    }
+  }
+}
+
+/* ── CTA Banner ────────────────────────────────────────────── */
+.fac-cta {
+  background: $primary;
+  border-radius: 12px;
+  padding: 2.5rem 3rem;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  position: relative;
+  overflow: hidden;
+
+  // Dot grid
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(rgba(#fff, 0.06) 1px, transparent 1px);
+    background-size: 24px 24px;
+    pointer-events: none;
+  }
+
+  // Blob
+  &::after {
+    content: "";
+    position: absolute;
+    right: -40px;
+    top: -40px;
+    width: 200px;
+    height: 200px;
+    background: radial-gradient(
+      circle,
+      rgba($secondary, 0.15) 0%,
+      transparent 70%
+    );
+    pointer-events: none;
+  }
+
+  @media (max-width: $mobile) {
+    padding: 1.8rem;
+  }
+}
+
+.fac-cta__icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: rgba($secondary, 0.12);
+  border: 1px solid rgba($secondary, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  position: relative;
+  z-index: 1;
+
+  i {
+    font-size: 1.3rem;
+    color: $secondary;
+  }
+}
+
+.fac-cta__body {
+  flex: 1;
+  min-width: 200px;
+  position: relative;
+  z-index: 1;
+
+  h3 {
+    font-family: "Playfair Display", serif;
+    font-size: 1.3rem;
+    font-weight: 400;
+    color: #fff;
+    margin-bottom: 0.3rem;
+  }
+
+  p {
+    font-family: "Outfit", sans-serif;
+    font-size: 0.85rem;
+    color: rgba(#fff, 0.65);
+    margin: 0;
+    line-height: 1.6;
+  }
+}
+
+.fac-cta__actions {
+  display: flex;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 1;
+}

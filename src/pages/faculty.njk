@@ -1,0 +1,77 @@
+---
+layout: layouts/base.njk
+title: Faculty – Merchant Institute of Nursing
+permalink: /faculty/
+---
+
+{# ── PAGE BANNER ───────────────────────────────────────────── #}
+<section class="page-banner">
+  <div class="banner-blob"></div>
+  <div class="banner-bar"></div>
+  <div class="container">
+    <span class="banner-eyebrow">Our Team</span>
+    <h1>Meet Our Faculty</h1>
+    <p>Experienced educators and clinical experts dedicated to shaping the next generation of nursing professionals.</p>
+  </div>
+</section>
+
+{# ── FACULTY STATS BAR ─────────────────────────────────────── #}
+<div class="faculty-stats-bar">
+  <div class="container">
+    <div class="fsb-inner">
+      <div class="fsb-item">
+        <span class="fsb-num">18</span>
+        <span class="fsb-label">Faculty Members</span>
+      </div>
+      <div class="fsb-divider"></div>
+      <div class="fsb-item">
+        <span class="fsb-num">1</span>
+        <span class="fsb-label">Vice Principal</span>
+      </div>
+      <div class="fsb-divider"></div>
+      <div class="fsb-item">
+        <span class="fsb-num">17</span>
+        <span class="fsb-label">Nursing Tutors</span>
+      </div>
+      <div class="fsb-divider"></div>
+      <div class="fsb-item">
+        <span class="fsb-num">100%</span>
+        <span class="fsb-label">Qualified Educators</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+{# ── FACULTY GRID ──────────────────────────────────────────── #}
+<section class="section bg-white">
+  <div class="container">
+
+    {# Grid populated by faculty-page.js #}
+    <div class="faculty-grid" id="facultyGrid">
+
+      {# Skeleton loaders shown while JS fetches data #}
+      <div class="fc-skeleton"></div>
+      <div class="fc-skeleton"></div>
+      <div class="fc-skeleton"></div>
+      <div class="fc-skeleton"></div>
+      <div class="fc-skeleton"></div>
+      <div class="fc-skeleton"></div>
+      <div class="fc-skeleton"></div>
+      <div class="fc-skeleton"></div>
+
+    </div>
+
+    {# Empty state (shown by JS if no results) #}
+    <div class="faculty-empty" id="facultyEmpty" style="display:none;">
+      <i class="fas fa-users-slash"></i>
+      <p>No faculty found for this department.</p>
+    </div>
+
+  </div>
+</section>
+
+{# Script loads faculty.json and renders cards #}
+<script>
+  window.FACULTY_JSON_URL = "{{ '/data/faculty.json' | url }}";
+</script>
+<script src="{{ '/js/faculty-page.js' | url }}"></script>

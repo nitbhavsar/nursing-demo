@@ -1,0 +1,240 @@
+---
+layout: layouts/base.njk
+title: Gallery – Merchant Institute of Nursing
+permalink: /gallery/
+---
+
+{# ── PAGE BANNER ───────────────────────────────────────────── #}
+<section class="page-banner">
+  <div class="banner-blob"></div>
+  <div class="banner-bar"></div>
+  <div class="container">
+    <nav class="banner-breadcrumb" aria-label="breadcrumb">
+      <a href="{{ '/' | url }}">Home</a>
+      <i class="fas fa-chevron-right"></i>
+      <span>Gallery</span>
+    </nav>
+    <span class="banner-eyebrow">Campus Life</span>
+    <h1>Photo Gallery</h1>
+    <p>A glimpse into our campus, laboratories, events and student life at Merchant Institute of Nursing.</p>
+  </div>
+</section>
+
+{# ── GALLERY ───────────────────────────────────────────────── #}
+<section class="section bg-white">
+  <div class="container">
+
+    {# Filter tabs #}
+    <div class="gallery-filter" data-aos="fade-up">
+      <button class="gf-btn active" data-filter="all">All</button>
+      <button class="gf-btn" data-filter="anatomy">Anatomy Lab</button>
+      <button class="gf-btn" data-filter="nutrition">Nutrition Lab</button>
+    </div>
+
+    <div class="gallery-grid" id="galleryGrid">
+
+      <div class="gallery-item" data-category="nutrition" data-aos="fade-up">
+        <div class="gi-wrap">
+          <img src="{{ '/images/gallery/nutrition-lab.jpg' | url }}" alt="Nutrition Lab" loading="lazy" />
+          <div class="gi-overlay">
+            <div class="gi-overlay-content">
+              <span class="gi-caption">Nutrition Lab</span>
+              <span class="gi-category">Nutrition Lab</span>
+            </div>
+            <button class="gi-zoom" aria-label="View full image"><i class="fas fa-expand"></i></button>
+          </div>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-category="nutrition" data-aos="fade-up" data-aos-delay="60">
+        <div class="gi-wrap">
+          <img src="{{ '/images/gallery/nutrition-lab-equipment.jpg' | url }}" alt="Nutrition Lab Equipment" loading="lazy" />
+          <div class="gi-overlay">
+            <div class="gi-overlay-content">
+              <span class="gi-caption">Nutrition Lab Equipment</span>
+              <span class="gi-category">Nutrition Lab</span>
+            </div>
+            <button class="gi-zoom" aria-label="View full image"><i class="fas fa-expand"></i></button>
+          </div>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-category="anatomy" data-aos="fade-up" data-aos-delay="120">
+        <div class="gi-wrap">
+          <img src="{{ '/images/gallery/anatomy-lab-charts.jpg' | url }}" alt="Anatomy Lab Charts" loading="lazy" />
+          <div class="gi-overlay">
+            <div class="gi-overlay-content">
+              <span class="gi-caption">Anatomy Lab Charts</span>
+              <span class="gi-category">Anatomy Lab</span>
+            </div>
+            <button class="gi-zoom" aria-label="View full image"><i class="fas fa-expand"></i></button>
+          </div>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-category="anatomy" data-aos="fade-up" data-aos-delay="180">
+        <div class="gi-wrap">
+          <img src="{{ '/images/gallery/human-muscle-model.jpg' | url }}" alt="Human Muscle Model" loading="lazy" />
+          <div class="gi-overlay">
+            <div class="gi-overlay-content">
+              <span class="gi-caption">Human Muscle Model</span>
+              <span class="gi-category">Anatomy Lab</span>
+            </div>
+            <button class="gi-zoom" aria-label="View full image"><i class="fas fa-expand"></i></button>
+          </div>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-category="anatomy" data-aos="fade-up">
+        <div class="gi-wrap">
+          <img src="{{ '/images/gallery/human-organ-models.jpg' | url }}" alt="Human Organ Models" loading="lazy" />
+          <div class="gi-overlay">
+            <div class="gi-overlay-content">
+              <span class="gi-caption">Human Organ Models</span>
+              <span class="gi-category">Anatomy Lab</span>
+            </div>
+            <button class="gi-zoom" aria-label="View full image"><i class="fas fa-expand"></i></button>
+          </div>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-category="anatomy" data-aos="fade-up" data-aos-delay="60">
+        <div class="gi-wrap">
+          <img src="{{ '/images/gallery/bone-specimens-anatomy-lab.jpg' | url }}" alt="Bone Specimens" loading="lazy" />
+          <div class="gi-overlay">
+            <div class="gi-overlay-content">
+              <span class="gi-caption">Bone Specimens</span>
+              <span class="gi-category">Anatomy Lab</span>
+            </div>
+            <button class="gi-zoom" aria-label="View full image"><i class="fas fa-expand"></i></button>
+          </div>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-category="anatomy" data-aos="fade-up" data-aos-delay="120">
+        <div class="gi-wrap">
+          <img src="{{ '/images/gallery/human-skeleton-collection.jpg' | url }}" alt="Human Skeleton Collection" loading="lazy" />
+          <div class="gi-overlay">
+            <div class="gi-overlay-content">
+              <span class="gi-caption">Human Skeleton Collection</span>
+              <span class="gi-category">Anatomy Lab</span>
+            </div>
+            <button class="gi-zoom" aria-label="View full image"><i class="fas fa-expand"></i></button>
+          </div>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-category="anatomy" data-aos="fade-up" data-aos-delay="180">
+        <div class="gi-wrap">
+          <img src="{{ '/images/gallery/heart-lung-model.jpg' | url }}" alt="Heart & Lung Model" loading="lazy" />
+          <div class="gi-overlay">
+            <div class="gi-overlay-content">
+              <span class="gi-caption">Heart &amp; Lung Model</span>
+              <span class="gi-category">Anatomy Lab</span>
+            </div>
+            <button class="gi-zoom" aria-label="View full image"><i class="fas fa-expand"></i></button>
+          </div>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-category="anatomy" data-aos="fade-up">
+        <div class="gi-wrap">
+          <img src="{{ '/images/gallery/circulatory-system-model.jpg' | url }}" alt="Circulatory System Model" loading="lazy" />
+          <div class="gi-overlay">
+            <div class="gi-overlay-content">
+              <span class="gi-caption">Circulatory System Model</span>
+              <span class="gi-category">Anatomy Lab</span>
+            </div>
+            <button class="gi-zoom" aria-label="View full image"><i class="fas fa-expand"></i></button>
+          </div>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-category="anatomy" data-aos="fade-up" data-aos-delay="60">
+        <div class="gi-wrap">
+          <img src="{{ '/images/gallery/human-urinary-system.jpg' | url }}" alt="Human Urinary System" loading="lazy" />
+          <div class="gi-overlay">
+            <div class="gi-overlay-content">
+              <span class="gi-caption">Human Urinary System</span>
+              <span class="gi-category">Anatomy Lab</span>
+            </div>
+            <button class="gi-zoom" aria-label="View full image"><i class="fas fa-expand"></i></button>
+          </div>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-category="anatomy" data-aos="fade-up" data-aos-delay="120">
+        <div class="gi-wrap">
+          <img src="{{ '/images/gallery/female-reproductive-system.jpg' | url }}" alt="Female Reproductive System" loading="lazy" />
+          <div class="gi-overlay">
+            <div class="gi-overlay-content">
+              <span class="gi-caption">Female Reproductive System</span>
+              <span class="gi-category">Anatomy Lab</span>
+            </div>
+            <button class="gi-zoom" aria-label="View full image"><i class="fas fa-expand"></i></button>
+          </div>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-category="anatomy" data-aos="fade-up" data-aos-delay="180">
+        <div class="gi-wrap">
+          <img src="{{ '/images/gallery/male-reproductive-system.jpg' | url }}" alt="Male Reproductive System" loading="lazy" />
+          <div class="gi-overlay">
+            <div class="gi-overlay-content">
+              <span class="gi-caption">Male Reproductive System</span>
+              <span class="gi-category">Anatomy Lab</span>
+            </div>
+            <button class="gi-zoom" aria-label="View full image"><i class="fas fa-expand"></i></button>
+          </div>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-category="anatomy" data-aos="fade-up">
+        <div class="gi-wrap">
+          <img src="{{ '/images/gallery/human-skull-models.jpg' | url }}" alt="Human Skull Models" loading="lazy" />
+          <div class="gi-overlay">
+            <div class="gi-overlay-content">
+              <span class="gi-caption">Human Skull Models</span>
+              <span class="gi-category">Anatomy Lab</span>
+            </div>
+            <button class="gi-zoom" aria-label="View full image"><i class="fas fa-expand"></i></button>
+          </div>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-category="anatomy" data-aos="fade-up" data-aos-delay="60">
+        <div class="gi-wrap">
+          <img src="{{ '/images/gallery/pre-clinical-science-lab.jpg' | url }}" alt="Pre-Clinical Science Lab" loading="lazy" />
+          <div class="gi-overlay">
+            <div class="gi-overlay-content">
+              <span class="gi-caption">Pre-Clinical Science Lab</span>
+              <span class="gi-category">Anatomy Lab</span>
+            </div>
+            <button class="gi-zoom" aria-label="View full image"><i class="fas fa-expand"></i></button>
+          </div>
+        </div>
+      </div>
+
+    </div>{# end gallery-grid #}
+
+  </div>
+</section>
+
+{# ── LIGHTBOX ──────────────────────────────────────────────── #}
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer" style="display:none;">
+  <div class="lightbox-backdrop" id="lightboxBackdrop"></div>
+  <div class="lightbox-inner">
+    <button class="lb-close" id="lbClose" aria-label="Close"><i class="fas fa-times"></i></button>
+    <button class="lb-prev" id="lbPrev" aria-label="Previous"><i class="fas fa-chevron-left"></i></button>
+    <button class="lb-next" id="lbNext" aria-label="Next"><i class="fas fa-chevron-right"></i></button>
+    <div class="lb-img-wrap">
+      <img src="" alt="" id="lbImg" />
+    </div>
+    <div class="lb-caption">
+      <span id="lbCaption"></span>
+      <span id="lbCounter" class="lb-counter"></span>
+    </div>
+  </div>
+</div>
+
+<script src="{{ '/js/gallery.js' | url }}"></script>

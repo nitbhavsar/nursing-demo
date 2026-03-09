@@ -556,7 +556,7 @@ p {
    ============================================================ */
 .home-hero {
   position: relative;
-  min-height: calc(100vh - 100px);
+  min-height: 90vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -4113,6 +4113,1150 @@ p {
 }
 .inq-info-item div a:hover {
   color: #2ec4b6;
+}
+
+/* ============================================================
+   FACULTY PAGE – Merchant Institute of Nursing
+   Uses project SCSS variables
+   ============================================================ */
+/* ============================================================
+   1. STATS BAR
+   ============================================================ */
+.faculty-stats-bar {
+  background: #f4fbfb;
+  border-bottom: 1px solid #eee;
+  padding: 0;
+  font-family: "Outfit", sans-serif;
+}
+
+.fsb-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 20px 0;
+}
+
+.fsb-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 3rem;
+  gap: 2px;
+}
+
+.fsb-num {
+  font-family: "Playfair Display", serif;
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #0f4c5c;
+  line-height: 1;
+}
+
+.fsb-label {
+  font-size: 0.65rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #5f7d86;
+}
+
+.fsb-divider {
+  width: 1px;
+  height: 36px;
+  background: #eee;
+}
+@media (max-width: 768px) {
+  .fsb-divider {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .fsb-item {
+    padding: 0.5rem 1.5rem;
+  }
+  .fsb-inner {
+    gap: 0;
+  }
+}
+/* ============================================================
+   2. FILTER BUTTONS
+   ============================================================ */
+.faculty-filter {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-bottom: 2.5rem;
+  font-family: "Outfit", sans-serif;
+}
+
+.filter-btn {
+  padding: 0.45rem 1.1rem;
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  border-radius: 20px;
+  border: 1.5px solid #eee;
+  background: transparent;
+  color: #5f7d86;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.filter-btn:hover {
+  border-color: #2ec4b6;
+  color: #0f4c5c;
+}
+.filter-btn.active {
+  background: #0f4c5c;
+  border-color: #0f4c5c;
+  color: #fff;
+}
+
+/* ============================================================
+   3. FACULTY GRID
+   ============================================================ */
+.faculty-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.4rem;
+}
+@media (max-width: 1200px) {
+  .faculty-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 992px) {
+  .faculty-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 480px) {
+  .faculty-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ============================================================
+   4. FACULTY CARD
+   ============================================================ */
+.faculty-card {
+  background: #ffffff;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  overflow: hidden;
+  font-family: "Outfit", sans-serif;
+  transition: box-shadow 0.3s, transform 0.3s;
+  position: relative;
+}
+.faculty-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: #2ec4b6;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s;
+  z-index: 1;
+}
+.faculty-card:hover {
+  box-shadow: 0 16px 48px rgba(15, 76, 92, 0.12);
+  transform: translateY(-5px);
+}
+.faculty-card:hover::before {
+  transform: scaleX(1);
+}
+.faculty-card.fc-featured {
+  border-color: rgba(46, 196, 182, 0.3);
+  box-shadow: 0 8px 32px rgba(15, 76, 92, 0.08);
+}
+.faculty-card.fc-featured::before {
+  transform: scaleX(1);
+}
+
+/* ── Photo area ────────────────────────────────────────────── */
+.fc-photo-wrap {
+  position: relative;
+  background: #f4fbfb;
+  height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.fc-photo-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+}
+
+.fc-initials-avatar {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background: var(--bg, #0f4c5c);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid var(--accent, #2ec4b6);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+.fc-initials-avatar span {
+  font-family: "Playfair Display", serif;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #fff;
+  letter-spacing: 0.05em;
+}
+
+.fc-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #2ec4b6;
+  color: #0f4c5c;
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 3px 10px;
+  border-radius: 2px;
+}
+
+.fc-sr {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: rgba(15, 76, 92, 0.75);
+  color: #fff;
+  font-size: 0.6rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+
+/* ── Card body ─────────────────────────────────────────────── */
+.fc-body {
+  padding: 1.1rem 1.2rem 1.2rem;
+}
+.fc-body h3 {
+  font-family: "Playfair Display", serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #0b1f24;
+  margin-bottom: 0.2rem;
+  line-height: 1.3;
+}
+
+.fc-designation {
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: #2ec4b6;
+  margin-bottom: 0.3rem;
+  letter-spacing: 0.02em;
+}
+
+.fc-qualification {
+  font-size: 0.75rem;
+  color: #5f7d86;
+  margin-bottom: 0.8rem;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.fc-qualification i {
+  color: #2ec4b6;
+  font-size: 0.65rem;
+}
+
+.fc-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  padding-top: 0.7rem;
+  border-top: 1px solid #eee;
+  flex-wrap: wrap;
+}
+
+.fc-dept,
+.fc-exp {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.68rem;
+  color: #5f7d86;
+  letter-spacing: 0.04em;
+}
+.fc-dept i,
+.fc-exp i {
+  color: #2ec4b6;
+  font-size: 0.6rem;
+}
+
+/* ============================================================
+   5. SKELETON LOADERS
+   ============================================================ */
+@keyframes shimmer {
+  0% {
+    background-position: -600px 0;
+  }
+  100% {
+    background-position: 600px 0;
+  }
+}
+.fc-skeleton::after, .fc-skeleton::before {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e8e8e8 50%, #f0f0f0 75%);
+  background-size: 600px 100%;
+  animation: shimmer 1.4s infinite linear;
+  border-radius: 4px;
+}
+
+.fc-skeleton {
+  background: #ffffff;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.fc-skeleton::before {
+  content: "";
+  display: block;
+  height: 180px;
+}
+.fc-skeleton::after {
+  content: "";
+  display: block;
+  margin: 1rem 1.2rem;
+  height: 80px;
+}
+
+/* ============================================================
+   6. EMPTY & ERROR STATES
+   ============================================================ */
+.faculty-empty,
+.faculty-error {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 4rem 2rem;
+  text-align: center;
+  width: 100%;
+  font-family: "Outfit", sans-serif;
+}
+.faculty-empty i,
+.faculty-error i {
+  font-size: 2.5rem;
+  color: rgba(95, 125, 134, 0.4);
+}
+.faculty-empty p,
+.faculty-error p {
+  font-size: 0.95rem;
+  color: #5f7d86;
+}
+
+.faculty-error i {
+  color: rgba(231, 76, 60, 0.5);
+}
+
+/* ============================================================
+   FACILITIES PAGE – Merchant Institute of Nursing
+   ============================================================ */
+/* ── Stats Bar ─────────────────────────────────────────────── */
+.fac-stats-bar {
+  background: #f4fbfb;
+  border-bottom: 1px solid #eee;
+  font-family: "Outfit", sans-serif;
+}
+
+.fac-stats-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 20px 0;
+}
+
+.fac-stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 3rem;
+  gap: 2px;
+}
+@media (max-width: 768px) {
+  .fac-stat-item {
+    padding: 0.5rem 1.5rem;
+  }
+}
+
+.fac-stat-num {
+  font-family: "Playfair Display", serif;
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #0f4c5c;
+  line-height: 1;
+}
+
+.fac-stat-label {
+  font-size: 0.65rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #5f7d86;
+}
+
+.fac-stat-divider {
+  width: 1px;
+  height: 36px;
+  background: #eee;
+}
+@media (max-width: 768px) {
+  .fac-stat-divider {
+    display: none;
+  }
+}
+
+/* ── Section Layout ────────────────────────────────────────── */
+.fac-section {
+  padding: 90px 0;
+}
+@media (max-width: 768px) {
+  .fac-section {
+    padding: 60px 0;
+  }
+}
+
+/* ── Lab Number Tag ────────────────────────────────────────── */
+.fac-lab-num {
+  display: inline-block;
+  font-family: "Playfair Display", serif;
+  font-size: 3rem;
+  font-weight: 600;
+  color: rgba(46, 196, 182, 0.2);
+  line-height: 1;
+  margin-bottom: -0.5rem;
+}
+.fac-lab-num--sm {
+  font-size: 2rem;
+  margin-bottom: 0.2rem;
+}
+
+/* ── Eyebrow ───────────────────────────────────────────────── */
+.fac-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: "Outfit", sans-serif;
+  font-size: 0.68rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #2ec4b6;
+  margin-bottom: 0.6rem;
+}
+.fac-eyebrow::before {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 2px;
+  background: #2ec4b6;
+  border-radius: 2px;
+}
+
+/* ── Section headings ──────────────────────────────────────── */
+.fac-section h2 {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(1.6rem, 2.5vw, 2.2rem);
+  font-weight: 400;
+  color: #0b1f24;
+  margin-bottom: 1rem;
+  line-height: 1.25;
+}
+
+.fac-section p {
+  font-family: "Outfit", sans-serif;
+  font-size: 0.93rem;
+  color: #5f7d86;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+}
+
+/* ── Feature list ──────────────────────────────────────────── */
+.fac-feature-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  font-family: "Outfit", sans-serif;
+}
+
+.fac-feature-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 0.86rem;
+  color: #0b1f24;
+  line-height: 1.6;
+}
+.fac-feature-item i {
+  color: #2ec4b6;
+  font-size: 0.75rem;
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+
+/* ── Image wrapper ─────────────────────────────────────────── */
+.fac-img-wrap {
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(15, 76, 92, 0.12);
+}
+.fac-img-wrap img {
+  width: 100%;
+  height: 360px;
+  object-fit: cover;
+  display: block;
+  background: #f4fbfb;
+}
+.fac-img-wrap:not(:has(img[src*="."]))::after,
+.fac-img-wrap img[src$=".jpg"]:not([src*="/"]) {
+  background: #f4fbfb;
+}
+@media (max-width: 768px) {
+  .fac-img-wrap img {
+    height: 240px;
+  }
+}
+
+.fac-img-badge {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #0f4c5c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  box-shadow: 0 4px 16px rgba(15, 76, 92, 0.4);
+}
+.fac-img-badge i {
+  color: #2ec4b6;
+  font-size: 1.1rem;
+}
+
+.fac-img-wrap::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(to right, #2ec4b6, rgba(46, 196, 182, 0));
+  z-index: 1;
+}
+
+/* ── Digital Facilities Cards ──────────────────────────────── */
+.fac-card {
+  background: #ffffff;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  padding: 2rem;
+  height: 100%;
+  font-family: "Outfit", sans-serif;
+  transition: box-shadow 0.3s, transform 0.3s;
+  position: relative;
+}
+.fac-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(to right, #0f4c5c, #2ec4b6);
+  border-radius: 10px 10px 0 0;
+}
+.fac-card:hover {
+  box-shadow: 0 16px 48px rgba(15, 76, 92, 0.1);
+  transform: translateY(-4px);
+}
+
+.fac-card-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 12px;
+  background: rgba(46, 196, 182, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.2rem;
+}
+.fac-card-icon i {
+  font-size: 1.3rem;
+  color: #0f4c5c;
+}
+
+.fac-card-body h3 {
+  font-family: "Playfair Display", serif;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #0b1f24;
+  margin-bottom: 0.5rem;
+}
+.fac-card-body p {
+  font-size: 0.85rem;
+  color: #5f7d86;
+  line-height: 1.7;
+  margin-bottom: 1.2rem;
+}
+
+.fac-card-features {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid #eee;
+}
+.fac-card-features span {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 0.8rem;
+  color: #0b1f24;
+  line-height: 1.5;
+}
+.fac-card-features span i {
+  color: #2ec4b6;
+  font-size: 0.45rem;
+  flex-shrink: 0;
+  margin-top: 5px;
+}
+
+/* ── CTA Banner ────────────────────────────────────────────── */
+.fac-cta {
+  background: #0f4c5c;
+  border-radius: 12px;
+  padding: 2.5rem 3rem;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  position: relative;
+  overflow: hidden;
+}
+.fac-cta::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.06) 1px, transparent 1px);
+  background-size: 24px 24px;
+  pointer-events: none;
+}
+.fac-cta::after {
+  content: "";
+  position: absolute;
+  right: -40px;
+  top: -40px;
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle, rgba(46, 196, 182, 0.15) 0%, transparent 70%);
+  pointer-events: none;
+}
+@media (max-width: 768px) {
+  .fac-cta {
+    padding: 1.8rem;
+  }
+}
+
+.fac-cta__icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: rgba(46, 196, 182, 0.12);
+  border: 1px solid rgba(46, 196, 182, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  position: relative;
+  z-index: 1;
+}
+.fac-cta__icon i {
+  font-size: 1.3rem;
+  color: #2ec4b6;
+}
+
+.fac-cta__body {
+  flex: 1;
+  min-width: 200px;
+  position: relative;
+  z-index: 1;
+}
+.fac-cta__body h3 {
+  font-family: "Playfair Display", serif;
+  font-size: 1.3rem;
+  font-weight: 400;
+  color: #fff;
+  margin-bottom: 0.3rem;
+}
+.fac-cta__body p {
+  font-family: "Outfit", sans-serif;
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.65);
+  margin: 0;
+  line-height: 1.6;
+}
+
+.fac-cta__actions {
+  display: flex;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 1;
+}
+
+/* ============================================================
+   GALLERY PAGE – Merchant Institute of Nursing
+   ============================================================ */
+/* ── Filter Buttons ────────────────────────────────────────── */
+.gallery-filter {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-bottom: 2.5rem;
+  font-family: "Outfit", sans-serif;
+}
+
+.gf-btn {
+  padding: 0.45rem 1.2rem;
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  border-radius: 20px;
+  border: 1.5px solid #eee;
+  background: transparent;
+  color: #5f7d86;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.gf-btn:hover {
+  border-color: #2ec4b6;
+  color: #0f4c5c;
+}
+.gf-btn.active {
+  background: #0f4c5c;
+  border-color: #0f4c5c;
+  color: #fff;
+}
+
+/* ── Gallery Grid ──────────────────────────────────────────── */
+.gallery-grid {
+  columns: 4;
+  column-gap: 1rem;
+}
+@media (max-width: 1200px) {
+  .gallery-grid {
+    columns: 3;
+  }
+}
+@media (max-width: 768px) {
+  .gallery-grid {
+    columns: 2;
+  }
+}
+@media (max-width: 480px) {
+  .gallery-grid {
+    columns: 1;
+  }
+}
+
+/* ── Gallery Item ──────────────────────────────────────────── */
+.gallery-item {
+  break-inside: avoid;
+  margin-bottom: 1rem;
+  transition: opacity 0.3s, transform 0.3s;
+}
+.gallery-item.gi-hidden {
+  opacity: 0;
+  transform: scale(0.95);
+}
+
+.gi-wrap {
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+  background: #f4fbfb;
+}
+.gi-wrap img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.4s ease;
+}
+.gi-wrap:hover img {
+  transform: scale(1.05);
+}
+.gi-wrap:hover .gi-overlay {
+  opacity: 1;
+}
+
+/* ── Overlay ───────────────────────────────────────────────── */
+.gi-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(15, 76, 92, 0.85) 0%, rgba(15, 76, 92, 0.2) 60%, transparent 100%);
+  opacity: 0;
+  transition: opacity 0.3s;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+.gi-overlay-content {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.gi-caption {
+  font-family: "Outfit", sans-serif;
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: #fff;
+  line-height: 1.3;
+}
+
+.gi-category {
+  font-family: "Outfit", sans-serif;
+  font-size: 0.62rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #2ec4b6;
+}
+
+.gi-zoom {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(255, 255, 255, 0.4);
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  align-self: flex-end;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s;
+  font-size: 0.75rem;
+}
+.gi-zoom:hover {
+  background: #2ec4b6;
+  border-color: #2ec4b6;
+  color: #0f4c5c;
+}
+
+/* ── Lightbox ──────────────────────────────────────────────── */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.lightbox.lb-active {
+  opacity: 1;
+}
+
+.lightbox-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(11, 31, 36, 0.92);
+  cursor: pointer;
+}
+
+.lightbox-inner {
+  position: relative;
+  z-index: 1;
+  max-width: 90vw;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.lb-img-wrap {
+  max-width: 90vw;
+  max-height: 80vh;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 32px 80px rgba(0, 0, 0, 0.5);
+}
+.lb-img-wrap img {
+  max-width: 90vw;
+  max-height: 80vh;
+  width: auto;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+
+.lb-caption {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  font-family: "Outfit", sans-serif;
+  padding: 0 0.5rem;
+}
+.lb-caption #lbCaption {
+  font-size: 0.88rem;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.lb-counter {
+  font-size: 0.72rem;
+  color: rgba(255, 255, 255, 0.45);
+  letter-spacing: 0.1em;
+}
+
+.lb-close,
+.lb-prev,
+.lb-next {
+  position: fixed;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s;
+  z-index: 2;
+  font-size: 0.9rem;
+}
+.lb-close:hover,
+.lb-prev:hover,
+.lb-next:hover {
+  background: #2ec4b6;
+  border-color: #2ec4b6;
+  color: #0f4c5c;
+}
+.lb-close:disabled,
+.lb-prev:disabled,
+.lb-next:disabled {
+  opacity: 0.25;
+  cursor: not-allowed;
+}
+.lb-close:disabled:hover,
+.lb-prev:disabled:hover,
+.lb-next:disabled:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.2);
+  color: #fff;
+}
+
+.lb-close {
+  top: 1.5rem;
+  right: 1.5rem;
+}
+
+.lb-prev {
+  left: 1.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.lb-next {
+  right: 1.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* ============================================================
+   CONTACT PAGE – Merchant Institute of Nursing
+   ============================================================ */
+/* ── Info Card ─────────────────────────────────────────────── */
+.contact-info-card {
+  font-family: "Outfit", sans-serif;
+}
+.contact-info-card h3 {
+  font-family: "Playfair Display", serif;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #0b1f24;
+  margin-bottom: 0.5rem;
+}
+.contact-info-card > p {
+  font-size: 0.88rem;
+  color: #5f7d86;
+  line-height: 1.75;
+  margin-bottom: 1.8rem;
+}
+
+.contact-info-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.contact-info-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.cii-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: rgba(46, 196, 182, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.cii-icon i {
+  font-size: 0.85rem;
+  color: #0f4c5c;
+}
+
+.cii-body {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.cii-body strong {
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #5f7d86;
+}
+.cii-body span,
+.cii-body a {
+  font-size: 0.88rem;
+  color: #0b1f24;
+  text-decoration: none;
+  line-height: 1.6;
+}
+.cii-body a:hover {
+  color: #2ec4b6;
+}
+
+/* ── Quick Action Buttons ──────────────────────────────────── */
+.contact-quick-actions {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.cqa-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0.6rem 1.4rem;
+  border-radius: 2px;
+  font-family: "Outfit", sans-serif;
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+.cqa-btn--call {
+  background: #0f4c5c;
+  color: #fff;
+}
+.cqa-btn--call:hover {
+  background: #0a3340;
+  color: #fff;
+  transform: translateY(-2px);
+}
+.cqa-btn--whatsapp {
+  background: #25d366;
+  color: #fff;
+}
+.cqa-btn--whatsapp:hover {
+  background: #1ebe5d;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+/* ── Form Card ─────────────────────────────────────────────── */
+.contact-form-card {
+  background: #ffffff;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  padding: 2.2rem;
+  box-shadow: 0 8px 32px rgba(15, 76, 92, 0.06);
+  font-family: "Outfit", sans-serif;
+}
+.contact-form-card h3 {
+  font-family: "Playfair Display", serif;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #0b1f24;
+  margin-bottom: 0.3rem;
+}
+.contact-form-card > p {
+  font-size: 0.86rem;
+  color: #5f7d86;
+  margin-bottom: 1.5rem;
+}
+@media (max-width: 576px) {
+  .contact-form-card {
+    padding: 1.4rem;
+  }
+}
+
+/* ── Map ───────────────────────────────────────────────────── */
+.contact-map-wrap {
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(15, 76, 92, 0.08);
+  border: 1px solid #eee;
+}
+.contact-map-wrap iframe {
+  display: block;
+}
+
+.contact-map-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0.85rem 1.2rem;
+  background: #0f4c5c;
+  font-family: "Outfit", sans-serif;
+  font-size: 0.82rem;
+  color: rgba(255, 255, 255, 0.85);
+}
+.contact-map-header i {
+  color: #2ec4b6;
+  font-size: 0.8rem;
 }
 
 /*# sourceMappingURL=style.css.map */

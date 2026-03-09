@@ -1,0 +1,374 @@
+@use "../base/variables" as *;
+
+/* ============================================================
+   FACULTY PAGE – Merchant Institute of Nursing
+   Uses project SCSS variables
+   ============================================================ */
+
+/* ============================================================
+   1. STATS BAR
+   ============================================================ */
+.faculty-stats-bar {
+  background: $bg-light;
+  border-bottom: 1px solid $border;
+  padding: 0;
+  font-family: "Outfit", sans-serif;
+}
+
+.fsb-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 20px 0;
+}
+
+.fsb-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 3rem;
+  gap: 2px;
+}
+
+.fsb-num {
+  font-family: "Playfair Display", serif;
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: $primary;
+  line-height: 1;
+}
+
+.fsb-label {
+  font-size: 0.65rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: $text-muted;
+}
+
+.fsb-divider {
+  width: 1px;
+  height: 36px;
+  background: $border;
+
+  @media (max-width: $mobile) {
+    display: none;
+  }
+}
+
+@media (max-width: $mobile) {
+  .fsb-item {
+    padding: 0.5rem 1.5rem;
+  }
+  .fsb-inner {
+    gap: 0;
+  }
+}
+
+/* ============================================================
+   2. FILTER BUTTONS
+   ============================================================ */
+.faculty-filter {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-bottom: 2.5rem;
+  font-family: "Outfit", sans-serif;
+}
+
+.filter-btn {
+  padding: 0.45rem 1.1rem;
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  border-radius: 20px;
+  border: 1.5px solid $border;
+  background: transparent;
+  color: $text-muted;
+  cursor: pointer;
+  transition: all 0.2s;
+
+  &:hover {
+    border-color: $secondary;
+    color: $primary;
+  }
+
+  &.active {
+    background: $primary;
+    border-color: $primary;
+    color: #fff;
+  }
+}
+
+/* ============================================================
+   3. FACULTY GRID
+   ============================================================ */
+.faculty-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.4rem;
+
+  @media (max-width: 1200px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  @media (max-width: 992px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media (max-width: 480px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ============================================================
+   4. FACULTY CARD
+   ============================================================ */
+.faculty-card {
+  background: $card-bg;
+  border: 1px solid $border;
+  border-radius: 10px;
+  overflow: hidden;
+  font-family: "Outfit", sans-serif;
+  transition:
+    box-shadow 0.3s,
+    transform 0.3s;
+  position: relative;
+
+  // Teal top bar on hover
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: $secondary;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s;
+    z-index: 1;
+  }
+
+  &:hover {
+    box-shadow: 0 16px 48px rgba($primary, 0.12);
+    transform: translateY(-5px);
+
+    &::before {
+      transform: scaleX(1);
+    }
+  }
+
+  // Featured card (Principal)
+  &.fc-featured {
+    border-color: rgba($secondary, 0.3);
+    box-shadow: 0 8px 32px rgba($primary, 0.08);
+
+    &::before {
+      transform: scaleX(1);
+    }
+  }
+}
+
+/* ── Photo area ────────────────────────────────────────────── */
+.fc-photo-wrap {
+  position: relative;
+  background: $bg-light;
+  height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+  }
+}
+
+// Initials avatar when no photo
+.fc-initials-avatar {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background: var(--bg, #0f4c5c);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid var(--accent, #2ec4b6);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+
+  span {
+    font-family: "Playfair Display", serif;
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: #fff;
+    letter-spacing: 0.05em;
+  }
+}
+
+// Featured / role badge
+.fc-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: $secondary;
+  color: $primary;
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 3px 10px;
+  border-radius: 2px;
+}
+
+// Sr. number badge
+.fc-sr {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: rgba($primary, 0.75);
+  color: #fff;
+  font-size: 0.6rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+
+/* ── Card body ─────────────────────────────────────────────── */
+.fc-body {
+  padding: 1.1rem 1.2rem 1.2rem;
+
+  h3 {
+    font-family: "Playfair Display", serif;
+    font-size: 1rem;
+    font-weight: 600;
+    color: $text-dark;
+    margin-bottom: 0.2rem;
+    line-height: 1.3;
+  }
+}
+
+.fc-designation {
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: $secondary;
+  margin-bottom: 0.3rem;
+  letter-spacing: 0.02em;
+}
+
+.fc-qualification {
+  font-size: 0.75rem;
+  color: $text-muted;
+  margin-bottom: 0.8rem;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+
+  i {
+    color: $secondary;
+    font-size: 0.65rem;
+  }
+}
+
+.fc-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  padding-top: 0.7rem;
+  border-top: 1px solid $border;
+  flex-wrap: wrap;
+}
+
+.fc-dept,
+.fc-exp {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.68rem;
+  color: $text-muted;
+  letter-spacing: 0.04em;
+
+  i {
+    color: $secondary;
+    font-size: 0.6rem;
+  }
+}
+
+/* ============================================================
+   5. SKELETON LOADERS
+   ============================================================ */
+@keyframes shimmer {
+  0% {
+    background-position: -600px 0;
+  }
+  100% {
+    background-position: 600px 0;
+  }
+}
+
+%skeleton {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e8e8e8 50%, #f0f0f0 75%);
+  background-size: 600px 100%;
+  animation: shimmer 1.4s infinite linear;
+  border-radius: 4px;
+}
+
+.fc-skeleton {
+  background: $card-bg;
+  border: 1px solid $border;
+  border-radius: 10px;
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    display: block;
+    height: 180px;
+    @extend %skeleton;
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    margin: 1rem 1.2rem;
+    height: 80px;
+    @extend %skeleton;
+  }
+}
+
+/* ============================================================
+   6. EMPTY & ERROR STATES
+   ============================================================ */
+.faculty-empty,
+.faculty-error {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 4rem 2rem;
+  text-align: center;
+  width: 100%;
+  font-family: "Outfit", sans-serif;
+
+  i {
+    font-size: 2.5rem;
+    color: rgba($text-muted, 0.4);
+  }
+
+  p {
+    font-size: 0.95rem;
+    color: $text-muted;
+  }
+}
+
+.faculty-error i {
+  color: rgba(#e74c3c, 0.5);
+}
