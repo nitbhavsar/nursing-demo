@@ -819,3 +819,50 @@
     flex-direction: column;
   }
 }
+.year-card__sem {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-primary);
+  margin: 1rem 0 0.35rem;
+  padding-bottom: 0.35rem;
+  border-bottom: 1px solid rgba(var(--color-primary-rgb), 0.2);
+
+  &:first-of-type {
+    margin-top: 0.5rem;
+  }
+}
+.exam-year-heading {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 1.5rem 0 0.5rem;
+  color: var(--color-dark);
+}
+
+.exam-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.875rem;
+}
+
+.exam-table th,
+.exam-table td {
+  padding: 0.5rem 0.75rem;
+  border: 1px solid var(--color-border, #e5e7eb);
+  text-align: left;
+}
+
+.exam-table thead th {
+  background: var(--color-primary-light, #eff6ff);
+  font-weight: 600;
+}
+
+.exam-table__total td {
+  background: #f9fafb;
+}
+
+.exam-table__grand td {
+  background: var(--color-primary-light, #eff6ff);
+  font-weight: 600;
+}
