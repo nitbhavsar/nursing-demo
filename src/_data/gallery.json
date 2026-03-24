@@ -1,0 +1,159 @@
+[
+  {
+    "src": "/images/gallery/nutrition-lab.jpg",
+    "caption": "Nutrition Lab",
+    "category": "nutrition",
+    "categoryName": "Nutrition Lab"
+  },
+  {
+    "src": "/images/gallery/nutrition-lab-equipment.jpg",
+    "caption": "Nutrition Lab Equipment",
+    "category": "nutrition",
+    "categoryName": "Nutrition Lab"
+  },
+
+  {
+    "src": "/images/gallery/anatomy-lab-charts.jpg",
+    "caption": "Anatomy Lab Charts",
+    "category": "anatomy",
+    "categoryName": "Anatomy Lab"
+  },
+  {
+    "src": "/images/gallery/human-muscle-model.jpg",
+    "caption": "Human Muscle Model",
+    "category": "anatomy",
+    "categoryName": "Anatomy Lab"
+  },
+  {
+    "src": "/images/gallery/human-organ-models.jpg",
+    "caption": "Human Organ Models",
+    "category": "anatomy",
+    "categoryName": "Anatomy Lab"
+  },
+  {
+    "src": "/images/gallery/bone-specimens-anatomy-lab.jpg",
+    "caption": "Bone Specimens",
+    "category": "anatomy",
+    "categoryName": "Anatomy Lab"
+  },
+  {
+    "src": "/images/gallery/human-skeleton-collection.jpg",
+    "caption": "Human Skeleton Collection",
+    "category": "anatomy",
+    "categoryName": "Anatomy Lab"
+  },
+  {
+    "src": "/images/gallery/heart-lung-model.jpg",
+    "caption": "Heart & Lung Model",
+    "category": "anatomy",
+    "categoryName": "Anatomy Lab"
+  },
+  {
+    "src": "/images/gallery/circulatory-system-model.jpg",
+    "caption": "Circulatory System Model",
+    "category": "anatomy",
+    "categoryName": "Anatomy Lab"
+  },
+  {
+    "src": "/images/gallery/human-urinary-system.jpg",
+    "caption": "Human Urinary System",
+    "category": "anatomy",
+    "categoryName": "Anatomy Lab"
+  },
+  {
+    "src": "/images/gallery/female-reproductive-system.jpg",
+    "caption": "Female Reproductive System",
+    "category": "anatomy",
+    "categoryName": "Anatomy Lab"
+  },
+  {
+    "src": "/images/gallery/male-reproductive-system.jpg",
+    "caption": "Male Reproductive System",
+    "category": "anatomy",
+    "categoryName": "Anatomy Lab"
+  },
+  {
+    "src": "/images/gallery/human-skull-models.jpg",
+    "caption": "Human Skull Models",
+    "category": "anatomy",
+    "categoryName": "Anatomy Lab"
+  },
+  {
+    "src": "/images/gallery/pre-clinical-science-lab.jpg",
+    "caption": "Pre-Clinical Science Lab",
+    "category": "anatomy",
+    "categoryName": "Anatomy Lab"
+  },
+  {
+    "src": "/images/gallery/campus1.jpeg",
+    "caption": "Campus Activity",
+    "category": "campusactivity",
+    "categoryName": "Campus Activity"
+  },
+  {
+    "src": "/images/gallery/campus2.jpeg",
+    "caption": "Campus Activity",
+    "category": "campusactivity",
+    "categoryName": "Campus Activity"
+  },
+  {
+    "src": "/images/gallery/campus3.jpeg",
+    "caption": "Campus Activity",
+    "category": "campusactivity",
+    "categoryName": "Campus Activity"
+  },
+  {
+    "src": "/images/gallery/campus4.jpeg",
+    "caption": "Campus Activity",
+    "category": "campusactivity",
+    "categoryName": "Campus Activity"
+  },
+  {
+    "src": "/images/gallery/campus5.jpeg",
+    "caption": "Campus Activity",
+    "category": "campusactivity",
+    "categoryName": "Campus Activity"
+  },
+  {
+    "src": "/images/gallery/campus6.jpeg",
+    "caption": "Cultural Fest",
+    "category": "campusactivity",
+    "categoryName": "Campus Activity"
+  },
+  {
+    "src": "/images/gallery/campus7.jpeg",
+    "caption": "Campus Activity",
+    "category": "campusactivity",
+    "categoryName": "Campus Activity"
+  },
+  {
+    "src": "/images/gallery/campus8.jpeg",
+    "caption": "Campus Activity",
+    "category": "campusactivity",
+    "categoryName": "Campus Activity"
+  },
+  {
+    "src": "/images/gallery/campus9.jpeg",
+    "caption": "Spots Day",
+    "category": "campusactivity",
+    "categoryName": "Campus Activity"
+  },
+  {
+    "src": "/images/gallery/campus10.jpeg",
+    "caption": "Campus Activity",
+    "category": "campusactivity",
+    "categoryName": "Campus Activity"
+  },
+  {
+    "src": "/images/gallery/campus11.jpeg",
+    "caption": "Campus Activity",
+    "category": "campusactivity",
+    "categoryName": "Campus Activity"
+  },
+  {
+    "src": "/images/gallery/BUS.jpeg",
+    "caption": "Bus Facility",
+    "category": "campusactivity",
+    "categoryName": "Campus Activity"
+  }
+]

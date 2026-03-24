@@ -29,193 +29,37 @@ permalink: /gallery/
       <button class="gf-btn active" data-filter="all">All</button>
       <button class="gf-btn" data-filter="anatomy">Anatomy Lab</button>
       <button class="gf-btn" data-filter="nutrition">Nutrition Lab</button>
+      <button class="gf-btn" data-filter="campusactivity">Campus Activity</button>
+    </div>
+<div class="gallery-grid" id="galleryGrid">
+
+  {% for item in gallery %}
+  <div class="gallery-item" 
+       data-category="{{ item.category }}" 
+       data-aos="fade-up" 
+       data-aos-delay="{{ loop.index0 * 60 }}">
+
+    <div class="gi-wrap">
+      <img src="{{ item.src | url }}" 
+           alt="{{ item.caption }}" 
+           loading="lazy" />
+
+      <div class="gi-overlay">
+        <div class="gi-overlay-content">
+          <span class="gi-caption">{{ item.caption }}</span>
+          <span class="gi-category">{{ item.categoryName }}</span>
+        </div>
+
+        <button class="gi-zoom" aria-label="View full image">
+          <i class="fas fa-expand"></i>
+        </button>
+      </div>
     </div>
 
-    <div class="gallery-grid" id="galleryGrid">
+  </div>
+  {% endfor %}
 
-      <div class="gallery-item" data-category="nutrition" data-aos="fade-up">
-        <div class="gi-wrap">
-          <img src="{{ '/images/gallery/nutrition-lab.jpg' | url }}" alt="Nutrition Lab" loading="lazy" />
-          <div class="gi-overlay">
-            <div class="gi-overlay-content">
-              <span class="gi-caption">Nutrition Lab</span>
-              <span class="gi-category">Nutrition Lab</span>
-            </div>
-            <button class="gi-zoom" aria-label="View full image"><i class="fas fa-expand"></i></button>
-          </div>
-        </div>
-      </div>
-
-      <div class="gallery-item" data-category="nutrition" data-aos="fade-up" data-aos-delay="60">
-        <div class="gi-wrap">
-          <img src="{{ '/images/gallery/nutrition-lab-equipment.jpg' | url }}" alt="Nutrition Lab Equipment" loading="lazy" />
-          <div class="gi-overlay">
-            <div class="gi-overlay-content">
-              <span class="gi-caption">Nutrition Lab Equipment</span>
-              <span class="gi-category">Nutrition Lab</span>
-            </div>
-            <button class="gi-zoom" aria-label="View full image"><i class="fas fa-expand"></i></button>
-          </div>
-        </div>
-      </div>
-
-      <div class="gallery-item" data-category="anatomy" data-aos="fade-up" data-aos-delay="120">
-        <div class="gi-wrap">
-          <img src="{{ '/images/gallery/anatomy-lab-charts.jpg' | url }}" alt="Anatomy Lab Charts" loading="lazy" />
-          <div class="gi-overlay">
-            <div class="gi-overlay-content">
-              <span class="gi-caption">Anatomy Lab Charts</span>
-              <span class="gi-category">Anatomy Lab</span>
-            </div>
-            <button class="gi-zoom" aria-label="View full image"><i class="fas fa-expand"></i></button>
-          </div>
-        </div>
-      </div>
-
-      <div class="gallery-item" data-category="anatomy" data-aos="fade-up" data-aos-delay="180">
-        <div class="gi-wrap">
-          <img src="{{ '/images/gallery/human-muscle-model.jpg' | url }}" alt="Human Muscle Model" loading="lazy" />
-          <div class="gi-overlay">
-            <div class="gi-overlay-content">
-              <span class="gi-caption">Human Muscle Model</span>
-              <span class="gi-category">Anatomy Lab</span>
-            </div>
-            <button class="gi-zoom" aria-label="View full image"><i class="fas fa-expand"></i></button>
-          </div>
-        </div>
-      </div>
-
-      <div class="gallery-item" data-category="anatomy" data-aos="fade-up">
-        <div class="gi-wrap">
-          <img src="{{ '/images/gallery/human-organ-models.jpg' | url }}" alt="Human Organ Models" loading="lazy" />
-          <div class="gi-overlay">
-            <div class="gi-overlay-content">
-              <span class="gi-caption">Human Organ Models</span>
-              <span class="gi-category">Anatomy Lab</span>
-            </div>
-            <button class="gi-zoom" aria-label="View full image"><i class="fas fa-expand"></i></button>
-          </div>
-        </div>
-      </div>
-
-      <div class="gallery-item" data-category="anatomy" data-aos="fade-up" data-aos-delay="60">
-        <div class="gi-wrap">
-          <img src="{{ '/images/gallery/bone-specimens-anatomy-lab.jpg' | url }}" alt="Bone Specimens" loading="lazy" />
-          <div class="gi-overlay">
-            <div class="gi-overlay-content">
-              <span class="gi-caption">Bone Specimens</span>
-              <span class="gi-category">Anatomy Lab</span>
-            </div>
-            <button class="gi-zoom" aria-label="View full image"><i class="fas fa-expand"></i></button>
-          </div>
-        </div>
-      </div>
-
-      <div class="gallery-item" data-category="anatomy" data-aos="fade-up" data-aos-delay="120">
-        <div class="gi-wrap">
-          <img src="{{ '/images/gallery/human-skeleton-collection.jpg' | url }}" alt="Human Skeleton Collection" loading="lazy" />
-          <div class="gi-overlay">
-            <div class="gi-overlay-content">
-              <span class="gi-caption">Human Skeleton Collection</span>
-              <span class="gi-category">Anatomy Lab</span>
-            </div>
-            <button class="gi-zoom" aria-label="View full image"><i class="fas fa-expand"></i></button>
-          </div>
-        </div>
-      </div>
-
-      <div class="gallery-item" data-category="anatomy" data-aos="fade-up" data-aos-delay="180">
-        <div class="gi-wrap">
-          <img src="{{ '/images/gallery/heart-lung-model.jpg' | url }}" alt="Heart & Lung Model" loading="lazy" />
-          <div class="gi-overlay">
-            <div class="gi-overlay-content">
-              <span class="gi-caption">Heart &amp; Lung Model</span>
-              <span class="gi-category">Anatomy Lab</span>
-            </div>
-            <button class="gi-zoom" aria-label="View full image"><i class="fas fa-expand"></i></button>
-          </div>
-        </div>
-      </div>
-
-      <div class="gallery-item" data-category="anatomy" data-aos="fade-up">
-        <div class="gi-wrap">
-          <img src="{{ '/images/gallery/circulatory-system-model.jpg' | url }}" alt="Circulatory System Model" loading="lazy" />
-          <div class="gi-overlay">
-            <div class="gi-overlay-content">
-              <span class="gi-caption">Circulatory System Model</span>
-              <span class="gi-category">Anatomy Lab</span>
-            </div>
-            <button class="gi-zoom" aria-label="View full image"><i class="fas fa-expand"></i></button>
-          </div>
-        </div>
-      </div>
-
-      <div class="gallery-item" data-category="anatomy" data-aos="fade-up" data-aos-delay="60">
-        <div class="gi-wrap">
-          <img src="{{ '/images/gallery/human-urinary-system.jpg' | url }}" alt="Human Urinary System" loading="lazy" />
-          <div class="gi-overlay">
-            <div class="gi-overlay-content">
-              <span class="gi-caption">Human Urinary System</span>
-              <span class="gi-category">Anatomy Lab</span>
-            </div>
-            <button class="gi-zoom" aria-label="View full image"><i class="fas fa-expand"></i></button>
-          </div>
-        </div>
-      </div>
-
-      <div class="gallery-item" data-category="anatomy" data-aos="fade-up" data-aos-delay="120">
-        <div class="gi-wrap">
-          <img src="{{ '/images/gallery/female-reproductive-system.jpg' | url }}" alt="Female Reproductive System" loading="lazy" />
-          <div class="gi-overlay">
-            <div class="gi-overlay-content">
-              <span class="gi-caption">Female Reproductive System</span>
-              <span class="gi-category">Anatomy Lab</span>
-            </div>
-            <button class="gi-zoom" aria-label="View full image"><i class="fas fa-expand"></i></button>
-          </div>
-        </div>
-      </div>
-
-      <div class="gallery-item" data-category="anatomy" data-aos="fade-up" data-aos-delay="180">
-        <div class="gi-wrap">
-          <img src="{{ '/images/gallery/male-reproductive-system.jpg' | url }}" alt="Male Reproductive System" loading="lazy" />
-          <div class="gi-overlay">
-            <div class="gi-overlay-content">
-              <span class="gi-caption">Male Reproductive System</span>
-              <span class="gi-category">Anatomy Lab</span>
-            </div>
-            <button class="gi-zoom" aria-label="View full image"><i class="fas fa-expand"></i></button>
-          </div>
-        </div>
-      </div>
-
-      <div class="gallery-item" data-category="anatomy" data-aos="fade-up">
-        <div class="gi-wrap">
-          <img src="{{ '/images/gallery/human-skull-models.jpg' | url }}" alt="Human Skull Models" loading="lazy" />
-          <div class="gi-overlay">
-            <div class="gi-overlay-content">
-              <span class="gi-caption">Human Skull Models</span>
-              <span class="gi-category">Anatomy Lab</span>
-            </div>
-            <button class="gi-zoom" aria-label="View full image"><i class="fas fa-expand"></i></button>
-          </div>
-        </div>
-      </div>
-
-      <div class="gallery-item" data-category="anatomy" data-aos="fade-up" data-aos-delay="60">
-        <div class="gi-wrap">
-          <img src="{{ '/images/gallery/pre-clinical-science-lab.jpg' | url }}" alt="Pre-Clinical Science Lab" loading="lazy" />
-          <div class="gi-overlay">
-            <div class="gi-overlay-content">
-              <span class="gi-caption">Pre-Clinical Science Lab</span>
-              <span class="gi-category">Anatomy Lab</span>
-            </div>
-            <button class="gi-zoom" aria-label="View full image"><i class="fas fa-expand"></i></button>
-          </div>
-        </div>
-      </div>
-
-    </div>{# end gallery-grid #}
+</div>
 
   </div>
 </section>
