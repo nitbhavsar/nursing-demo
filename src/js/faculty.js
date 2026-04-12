@@ -22,7 +22,9 @@ document.addEventListener("DOMContentLoaded", async function () {
     }
 
     let delay = 0;
-    data.forEach((member) => {
+    const currentYear = new Date().getFullYear();
+
+    data.slice(0, 6).forEach((member) => {
       const col = document.createElement("div");
       col.className = "col-md-6 col-lg-4";
 
@@ -30,7 +32,7 @@ document.addEventListener("DOMContentLoaded", async function () {
       const designation = formatText(member.designation || "");
       const dept = member.department ? formatText(member.department) : null;
       const qual = member.qualification || null;
-      const exp = member.experience || null;
+      const exp = currentYear - parseInt(member.experience, 10) || null;
 
       // Photo or initials avatar
       const initials = getInitials(name);

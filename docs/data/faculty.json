@@ -5,88 +5,128 @@
     "designation": "Vice Principal"
   },
   {
+    "sr_no": 1,
+    "name": "Chaudhari Rekha Kantilal",
+    "designation": "Nursing Tutor",
+    "qualification": "M.sc Nursing (Child health)",
+    "experience": 2019
+  },
+  {
     "sr_no": 2,
     "name": "Vaghela Yogita Chimanbhai",
-    "designation": "Nursing Tutor"
+    "designation": "Nursing Tutor",
+    "qualification": "M.sc nursing",
+    "experience": 2021
   },
   {
     "sr_no": 3,
     "name": "Solanki Jigarbhai Prahaladbhai",
-    "designation": "Nursing Tutor"
+    "designation": "Nursing Tutor",
+    "qualification": ""
   },
   {
     "sr_no": 4,
     "name": "Agrawal Khushbuben Dineshbhai",
-    "designation": "Nursing Tutor"
+    "designation": "Nursing Tutor",
+    "qualification": "M.sc nursing",
+    "experience": 2024
   },
   {
     "sr_no": 5,
     "name": "Modi Nishitaben Prakashbhai",
-    "designation": "Nursing Tutor"
+    "designation": "Nursing Tutor",
+    "qualification": "M.sc nursing",
+    "experience": 2022
   },
   {
     "sr_no": 6,
     "name": "Chaudhari Ektaben Abherajbhai",
-    "designation": "Nursing Tutor"
+    "designation": "Nursing Tutor",
+    "qualification": "M.sc nursing",
+    "experience": 2019
   },
   {
     "sr_no": 7,
     "name": "Parmar Kiranben Amrutbhai",
-    "designation": "Nursing Tutor"
+    "designation": "Nursing Tutor",
+    "qualification": "B.sc nursing",
+    "experience": 2024
   },
   {
     "sr_no": 8,
     "name": "Chaudhari Drashtiben Ishvarbhai",
-    "designation": "Nursing Tutor"
+    "designation": "Nursing Tutor",
+    "qualification": "B.sc nursing",
+    "experience": 2024
   },
   {
     "sr_no": 9,
     "name": "Patel Dishaben Rameshbhai",
-    "designation": "Nursing Tutor"
+    "designation": "Nursing Tutor",
+    "qualification": "B.sc nursing",
+    "experience": 2024
   },
   {
     "sr_no": 10,
     "name": "Vanik Krupal Kishankumar",
-    "designation": "Nursing Tutor"
+    "designation": "Nursing Tutor",
+    "qualification": "B.sc nursing",
+    "experience": 2024
   },
   {
     "sr_no": 11,
     "name": "Patel Brijalben Rajendrabhai",
-    "designation": "Nursing Tutor"
+    "designation": "Nursing Tutor",
+    "qualification": "M.sc nursing",
+    "experience": 2020
   },
   {
     "sr_no": 12,
     "name": "Vaghela Arpitaba Ajitsinh",
-    "designation": "Nursing Tutor"
+    "designation": "Nursing Tutor",
+    "qualification": "B.sc nursing",
+    "experience": 2024
   },
   {
     "sr_no": 13,
     "name": "Patel Krimiben Pravinbhai",
-    "designation": "Nursing Tutor"
+    "designation": "Nursing Tutor",
+    "qualification": "B.sc nursing",
+    "experience": 2025
   },
   {
     "sr_no": 14,
     "name": "Chaudhari Margiben Hit",
-    "designation": "Nursing Tutor"
+    "designation": "Nursing Tutor",
+    "qualification": "B.sc nursing",
+    "experience": 2024
   },
   {
     "sr_no": 15,
-    "name": "Chauhan Anishaba Mahendrasinh",
-    "designation": "Nursing Tutor"
+    "name": "Chauhan Anisha Mahendrasinh",
+    "designation": "Nursing Tutor",
+    "qualification": "B.sc nursing",
+    "experience": 2025
   },
   {
     "sr_no": 16,
     "name": "Sharma Jainikkumar Virendrakumar",
-    "designation": "Nursing Tutor"
+    "designation": "Nursing Tutor",
+    "qualification": "B.sc nursing",
+    "experience": 2025
   },
   {
     "sr_no": 17,
     "name": "Patel Yash Prakashbhai",
-    "designation": "Nursing Tutor"
+    "designation": "Nursing Tutor",
+    "qualification": "B.sc nursing",
+    "experience": 2025
   },
   {
     "sr_no": 18,
     "name": "Patel Dhruvi Harshadkumar",
-    "designation": "Nursing Tutor"
+    "designation": "Nursing Tutor",
+    "qualification": "B.sc nursing",
+    "experience": 2025
   }
 ]

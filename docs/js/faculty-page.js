@@ -63,8 +63,10 @@
       );
     }
     if (member.experience) {
+      const currentYear = new Date().getFullYear();
+      const years = currentYear - parseInt(member.experience, 10);
       footerItems.push(
-        `<span class="fc-exp"><i class="fas fa-briefcase"></i> ${member.experience} Yrs</span>`,
+        `<span class="fc-exp"><i class="fas fa-briefcase"></i> ${years} Yrs</span>`,
       );
     }
     const footerHTML = footerItems.length
