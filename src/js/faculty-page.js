@@ -38,7 +38,7 @@
 
     // Photo or initials avatar
     const photoHTML = member.photo
-      ? `<img src="${member.photo}" alt="${member.name}" loading="lazy" />`
+      ? `<img src="..${member.photo}" alt="${member.name}" loading="lazy" />`
       : `<div class="fc-initials-avatar" style="--bg:${bg};--accent:${accent};">
            <span>${initials}</span>
          </div>`;

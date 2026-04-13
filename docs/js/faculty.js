@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", async function () {
       // Photo or initials avatar
       const initials = getInitials(name);
       const photoSection = member.photo
-        ? `<img src="${member.photo}" class="faculty-img" alt="${name}" loading="lazy">`
+        ? `<img src=".${member.photo}" class="faculty-img" alt="${name}" loading="lazy">`
         : `<div class="faculty-avatar">${initials}</div>`;
 
       // Optional meta pills

@@ -1,132 +1,151 @@
 [
   {
     "sr_no": 1,
-    "name": "Makwana Jayantbhai Vithaldas",
-    "designation": "Vice Principal"
+    "name": "Makwana Jayant Vithaldas",
+    "designation": "Vice Principal",
+    "photo": ""
   },
   {
     "sr_no": 1,
     "name": "Chaudhari Rekha Kantilal",
     "designation": "Nursing Tutor",
     "qualification": "M.sc Nursing (Child health)",
-    "experience": 2019
+    "experience": 2019,
+    "photo": "/images/faculty/rakhachaudhary.jpeg"
   },
   {
     "sr_no": 2,
     "name": "Vaghela Yogita Chimanbhai",
     "designation": "Nursing Tutor",
     "qualification": "M.sc nursing",
-    "experience": 2021
+    "experience": 2021,
+    "photo": "/images/faculty/yogitavaghela.jpeg"
   },
   {
     "sr_no": 3,
-    "name": "Solanki Jigarbhai Prahaladbhai",
+    "name": "Solanki Jigar Prahaladbhai",
     "designation": "Nursing Tutor",
-    "qualification": ""
+    "qualification": "",
+    "photo": ""
   },
   {
     "sr_no": 4,
-    "name": "Agrawal Khushbuben Dineshbhai",
+    "name": "Agrawal Khushbu Dineshbhai",
     "designation": "Nursing Tutor",
     "qualification": "M.sc nursing",
-    "experience": 2024
+    "experience": 2024,
+    "photo": "/images/faculty/khushbuagrawal.jpeg"
   },
   {
     "sr_no": 5,
-    "name": "Modi Nishitaben Prakashbhai",
+    "name": "Modi Nishita Prakashbhai",
     "designation": "Nursing Tutor",
     "qualification": "M.sc nursing",
-    "experience": 2022
+    "experience": 2022,
+    "photo": "/images/faculty/nishitamodi.jpeg"
   },
   {
     "sr_no": 6,
-    "name": "Chaudhari Ektaben Abherajbhai",
+    "name": "Chaudhari Ekta Abherajbhai",
     "designation": "Nursing Tutor",
     "qualification": "M.sc nursing",
-    "experience": 2019
+    "experience": 2019,
+    "photo": "/images/faculty/ektachaudhari.jpeg"
   },
   {
     "sr_no": 7,
-    "name": "Parmar Kiranben Amrutbhai",
+    "name": "Parmar Kiran Amrutbhai",
     "designation": "Nursing Tutor",
     "qualification": "B.sc nursing",
-    "experience": 2024
+    "experience": 2024,
+    "photo": "/images/faculty/kiranparmar.jpeg"
   },
   {
     "sr_no": 8,
-    "name": "Chaudhari Drashtiben Ishvarbhai",
+    "name": "Chaudhari Drashti Ishvarbhai",
     "designation": "Nursing Tutor",
     "qualification": "B.sc nursing",
-    "experience": 2024
+    "experience": 2024,
+    "photo": "/images/faculty/dhrashtichaudhari.jpeg"
   },
   {
     "sr_no": 9,
-    "name": "Patel Dishaben Rameshbhai",
+    "name": "Patel Disha Rameshbhai",
     "designation": "Nursing Tutor",
     "qualification": "B.sc nursing",
-    "experience": 2024
+    "experience": 2024,
+    "photo": "/images/faculty/dishapatel.jpeg"
   },
   {
     "sr_no": 10,
     "name": "Vanik Krupal Kishankumar",
     "designation": "Nursing Tutor",
     "qualification": "B.sc nursing",
-    "experience": 2024
+    "experience": 2024,
+    "photo": "/images/faculty/krupalvanik.jpeg"
   },
   {
     "sr_no": 11,
-    "name": "Patel Brijalben Rajendrabhai",
+    "name": "Patel Brijal Rajendrabhai",
     "designation": "Nursing Tutor",
     "qualification": "M.sc nursing",
-    "experience": 2020
+    "experience": 2020,
+    "photo": "/images/faculty/brijalpatel.jpeg"
   },
   {
     "sr_no": 12,
-    "name": "Vaghela Arpitaba Ajitsinh",
+    "name": "Vaghela Arpita Ajitsinh",
     "designation": "Nursing Tutor",
     "qualification": "B.sc nursing",
-    "experience": 2024
+    "experience": 2024,
+    "photo": "/images/faculty/arpitavaghela.jpeg"
   },
   {
     "sr_no": 13,
-    "name": "Patel Krimiben Pravinbhai",
+    "name": "Patel Krimi Pravinbhai",
     "designation": "Nursing Tutor",
     "qualification": "B.sc nursing",
-    "experience": 2025
+    "experience": 2025,
+    "photo": "/images/faculty/krimipatel.jpeg"
   },
   {
     "sr_no": 14,
-    "name": "Chaudhari Margiben Hit",
+    "name": "Chaudhari Margi Hit",
     "designation": "Nursing Tutor",
     "qualification": "B.sc nursing",
-    "experience": 2024
+    "experience": 2024,
+    "photo": "/images/faculty/margichaudhari.jpeg"
   },
   {
     "sr_no": 15,
     "name": "Chauhan Anisha Mahendrasinh",
     "designation": "Nursing Tutor",
     "qualification": "B.sc nursing",
-    "experience": 2025
+    "experience": 2025,
+    "photo": "/images/faculty/anishachaudhari.jpeg"
   },
   {
     "sr_no": 16,
     "name": "Sharma Jainikkumar Virendrakumar",
     "designation": "Nursing Tutor",
     "qualification": "B.sc nursing",
-    "experience": 2025
+    "experience": 2025,
+    "photo": "/images/faculty/jainiksharma.jpeg"
   },
   {
     "sr_no": 17,
     "name": "Patel Yash Prakashbhai",
     "designation": "Nursing Tutor",
     "qualification": "B.sc nursing",
-    "experience": 2025
+    "experience": 2025,
+    "photo": "/images/faculty/yashpatel.jpeg"
   },
   {
     "sr_no": 18,
     "name": "Patel Dhruvi Harshadkumar",
     "designation": "Nursing Tutor",
     "qualification": "B.sc nursing",
-    "experience": 2025
+    "experience": 2025,
+    "photo": "/images/faculty/dhruvipatel.jpeg"
   }
 ]
