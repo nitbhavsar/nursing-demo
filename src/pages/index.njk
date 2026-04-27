@@ -82,8 +82,45 @@ permalink: /index.html
       <a href="{{ '/about/' | url }}" class="btn-primary mt-3">Learn More About Us</a>
     </div>
 
-    <div class="img-box" data-aos="fade-left" data-aos-delay="150" aria-hidden="true"></div>
-
+    <!-- <div class="img-box" data-aos="fade-left" data-aos-delay="150" aria-hidden="true"></div> -->
+ <div class="image-slider" data-aos="fade-left" data-aos-delay="150">
+      <div class="slider-container">
+        <div class="slider-wrapper">
+          <div class="slider-track">
+            <div class="slide">
+              <img src="./images/sliderimages/slider1.jpeg" alt="Campus Learning Environment" loading="lazy">
+              <div class="slide-caption">Modern Learning Spaces</div>
+            </div>
+            <div class="slide">
+              <img src="./images/sliderimages/slider2.jpeg" alt="Clinical Laboratory" loading="lazy">
+              <div class="slide-caption">Advanced Clinical Labs</div>
+            </div>
+            <div class="slide">
+              <img src="./images/sliderimages/slider3.jpeg" alt="Faculty Interaction" loading="lazy">
+              <div class="slide-caption">Expert Faculty Guidance</div>
+            </div>
+            <div class="slide">
+              <img src="./images/sliderimages/slider4.jpeg" alt="Student Community" loading="lazy">
+              <div class="slide-caption">Vibrant Campus Life</div>
+            </div>
+          </div>
+        </div>
+ 
+        <button class="slider-btn slider-btn--prev" aria-label="Previous slide">
+          <i class="fas fa-chevron-left"></i>
+        </button>
+        <button class="slider-btn slider-btn--next" aria-label="Next slide">
+          <i class="fas fa-chevron-right"></i>
+        </button>
+ 
+        <div class="slider-dots">
+          <button class="dot active" data-slide="0" aria-label="Go to slide 1"></button>
+          <button class="dot" data-slide="1" aria-label="Go to slide 2"></button>
+          <button class="dot" data-slide="2" aria-label="Go to slide 3"></button>
+          <button class="dot" data-slide="3" aria-label="Go to slide 4"></button>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -428,3 +465,4 @@ permalink: /index.html
 
   </div>
 </section>
+ 
