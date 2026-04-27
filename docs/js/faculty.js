@@ -129,8 +129,8 @@ function showEmpty(container) {
 document.addEventListener("DOMContentLoaded", () => {
   const sliderTrack = document.querySelector(".slider-track");
   const dots = document.querySelectorAll(".dot");
-  const prevBtn = document.querySelector(".slider-btn--prev");
-  const nextBtn = document.querySelector(".slider-btn--next");
+  // const prevBtn = document.querySelector(".slider-btn--prev");
+  // const nextBtn = document.querySelector(".slider-btn--next");
   let currentSlide = 0;
   const totalSlides = dots.length;
   let autoplayInterval;
@@ -170,8 +170,8 @@ document.addEventListener("DOMContentLoaded", () => {
     startAutoplay();
   }
 
-  prevBtn.addEventListener("click", prevSlide);
-  nextBtn.addEventListener("click", nextSlide);
+  // prevBtn.addEventListener("click", prevSlide);
+  // nextBtn.addEventListener("click", nextSlide);
 
   dots.forEach((dot, index) => {
     dot.addEventListener("click", () => goToSlide(index));
