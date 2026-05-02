@@ -23,8 +23,27 @@ document.addEventListener("DOMContentLoaded", async function () {
 
     let delay = 0;
     const currentYear = new Date().getFullYear();
+    const sortedData = data.sort((a, b) => {
+      const roleA = (a.designation || "").toLowerCase();
+      const roleB = (b.designation || "").toLowerCase();
 
-    data.slice(0, 6).forEach((member) => {
+      // Priority roles
+      if (roleA.includes("principal")) return -1;
+      if (roleB.includes("principal")) return 1;
+
+      if (roleA.includes("vice principal")) return -1;
+      if (roleB.includes("vice principal")) return 1;
+
+      // Experience sorting (older year = more experience)
+      const expA = parseInt(a.experience, 10);
+      const expB = parseInt(b.experience, 10);
+
+      if (isNaN(expA)) return 1;
+      if (isNaN(expB)) return -1;
+
+      return expA - expB; // ASC → 2018 first, 2025 last
+    });
+    sortedData.slice(0, 6).forEach((member) => {
       const col = document.createElement("div");
       col.className = "col-md-6 col-lg-4";
 

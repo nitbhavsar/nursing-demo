@@ -3,12 +3,12 @@
     "sr_no": 1,
     "name": "Makwana Jayant Vithaldas",
     "designation": "Vice Principal",
-    "photo": ""
+    "photo": "/images/faculty/jayantmakwana.jpeg"
   },
   {
     "sr_no": 1,
     "name": "Chaudhari Rekha Kantilal",
-    "designation": "Assistant Professor",
+    "designation": "Asst. Professor",
     "qualification": "M.sc Nursing (Child health)",
     "experience": 2019,
     "photo": "/images/faculty/rakhachaudhary.jpeg"
@@ -16,8 +16,8 @@
   {
     "sr_no": 2,
     "name": "Vaghela Yogita Chimanbhai",
-    "designation": "Assistant Professor",
-    "qualification": "M.sc nursing",
+    "designation": "Asst. Professor",
+    "qualification": "M.sc nursing (OBG)",
     "experience": 2021,
     "photo": "/images/faculty/yogitavaghela.jpeg"
   },
@@ -25,22 +25,22 @@
     "sr_no": 3,
     "name": "Solanki Jigar Prahaladbhai",
     "designation": "Nursing Tutor",
-    "qualification": "",
-    "photo": ""
+    "qualification": "Msc nursing (Community’s Health Nursing)",
+    "photo": "/images/faculty/jigarsolanki.jpeg"
   },
   {
     "sr_no": 4,
     "name": "Agrawal Khushbu Dineshbhai",
     "designation": "Nursing Tutor",
-    "qualification": "M.sc nursing",
+    "qualification": "M.sc nursing (Psychiatrist)",
     "experience": 2024,
     "photo": "/images/faculty/khushbuagrawal.jpeg"
   },
   {
     "sr_no": 5,
     "name": "Modi Nishita Prakashbhai",
-    "designation": "Nursing Tutor",
-    "qualification": "M.sc nursing",
+    "designation": "Medical surgical",
+    "qualification": "M.sc nursing (Medical surgical)",
     "experience": 2022,
     "photo": "/images/faculty/nishitamodi.jpeg"
   },
@@ -48,7 +48,7 @@
     "sr_no": 6,
     "name": "Chaudhari Ekta Abherajbhai",
     "designation": "Nursing Tutor",
-    "qualification": "M.sc nursing",
+    "qualification": "B.sc nursing",
     "experience": 2019,
     "photo": "/images/faculty/ektachaudhari.jpeg"
   },
@@ -147,5 +147,21 @@
     "qualification": "B.sc nursing",
     "experience": 2025,
     "photo": "/images/faculty/dhruvipatel.jpeg"
+  },
+  {
+    "sr_no": 19,
+    "name": "Patel Dhara Rajendra",
+    "designation": "Nursing Tutor",
+    "qualification": "B.sc nursing",
+    "experience": 2021,
+    "photo": "/images/faculty/dharapatel.jpg"
+  },
+  {
+    "sr_no": 20,
+    "name": "Patel Palak C",
+    "designation": "Asst. Professor",
+    "qualification": "M.sc (OBC)",
+    "experience": 2018,
+    "photo": "/images/faculty/palakpatel.png"
   }
 ]
