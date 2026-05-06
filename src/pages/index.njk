@@ -1,62 +1,141 @@
 ---
 layout: layouts/base.njk
-title: Merchant Institute of Nursing – Piludara
+title: Merchant Institute of Nursing – Piludara, Mehsana
 permalink: /index.html
 ---
 
 {# ── HERO ──────────────────────────────────────────────────── #}
-<section class="home-hero">
-  <div class="home-hero__bg"></div>
-  <div class="home-hero__overlay"></div>
+<section class="hero-section">
+  <div class="container-fluid px-0">
+    <div class="row g-0 hero-row align-items-center">
 
-  <div class="home-hero__content container">
-    <span class="home-hero__eyebrow">Est. 2022 · Piludara, Gujarat</span>
+      <!-- LEFT: SLIDER WITH OVERLAY TEXT -->
+      <div class="col-lg-8 hero-slider">
 
-    <h1 class="home-hero__title" data-aos="fade-up">
-      Shaping the Future<br>of <em>Healthcare<br>Excellence</em>
-    </h1>
+        <div id="heroCarousel" class="carousel slide carousel-fade h-100" data-bs-ride="carousel" data-bs-interval="4000">
 
-    <p class="home-hero__sub" data-aos="fade-up" data-aos-delay="120">
-      Merchant Institute of Nursing – Piludara prepares skilled, ethical
-      and compassionate nursing professionals through world-class academic
-      foundations and extensive clinical training.
-    </p>
+          <!-- Indicators -->
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active"></button>
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2"></button>
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="3"></button>
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="4"></button>
+          </div>
 
-    <div class="home-hero__actions" data-aos="fade-up" data-aos-delay="240">
-      <a href="{{ '/admission/' | url }}" class="btn-primary">Apply for Admission</a>
-      <a href="{{ '/about/' | url }}" class="btn-ghost">Discover Our Story</a>
-    </div>
+          <div class="carousel-inner h-100">
 
-    <div class="home-hero__badges" data-aos="fade-up" data-aos-delay="360">
-      <div class="hero-badge-pill"><i class="fas fa-university"></i> HNGU Affiliated</div>
-      <div class="hero-badge-pill"><i class="fas fa-certificate"></i> GNC Recognised</div>
-      <div class="hero-badge-pill"><i class="fas fa-building-columns"></i> Govt. of Gujarat</div>
-    </div>
-  </div>
+            <!-- Slide 1 -->
+            <div class="carousel-item active h-100">
+              <img src="./images/MerchantCampus.jpg" class="w-100 h-100 object-fit-cover" alt="">
+              <!-- <div class="slider-overlay-content">
+                <span>Admissions Open 2026</span>
+                <h3>Modern Campus & Infrastructure</h3>
+              </div> -->
+            </div>
 
-  <div class="home-hero__stats">
-    <div class="container">
-      <div class="hero-stats-bar">
-        <div class="hero-stat">
-          <span class="hero-stat__num">30+</span>
-          <span class="hero-stat__label">Acre Campus</span>
-        </div>
-        <div class="hero-stat-divider"></div>
-        <div class="hero-stat">
-          <span class="hero-stat__num">4</span>
-          <span class="hero-stat__label">Programs</span>
-        </div>
-        <div class="hero-stat-divider"></div>
-        <div class="hero-stat">
-          <span class="hero-stat__num">210+</span>
-          <span class="hero-stat__label">Total Seats</span>
-        </div>
-        <div class="hero-stat-divider"></div>
-        <div class="hero-stat">
-          <span class="hero-stat__num">2022</span>
-          <span class="hero-stat__label">Established</span>
+            <!-- Slide 2 -->
+            <div class="carousel-item h-100">
+              <img src="./images/sliderimages/slider1.jpeg" class="w-100 h-100 object-fit-cover" alt="">
+              <!-- <div class="slider-overlay-content">
+                <span>Clinical Excellence</span>
+                <h3>Hands-on Hospital Training</h3>
+              </div> -->
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="carousel-item h-100">
+              <img src="./images/sliderimages/slider2.jpeg" class="w-100 h-100 object-fit-cover" alt="">
+              <!-- <div class="slider-overlay-content">
+                <span>Expert Faculty</span>
+                <h3>Guided by Professionals</h3>
+              </div> -->
+            </div>
+
+            <!-- Slide 4 -->
+            <div class="carousel-item h-100">
+              <img src="./images/sliderimages/slider3.jpeg" class="w-100 h-100 object-fit-cover" alt="">
+              <!-- <div class="slider-overlay-content">
+                <span>Student Life</span>
+                <h3>Supportive Learning Environment</h3>
+              </div> -->
+            </div>
+
+            <!-- Slide 5 -->
+            <div class="carousel-item h-100">
+              <img src="./images/sliderimages/slider4.jpeg" class="w-100 h-100 object-fit-cover" alt="">
+              <!-- <div class="slider-overlay-content">
+                <span>Career Growth</span>
+                <h3>Placement & Opportunities</h3>
+              </div> -->
+            </div>
+
+          </div>
         </div>
       </div>
+
+      <!-- RIGHT: CONTENT -->
+      <div class="col-lg-4 hero-content d-flex align-items-center">
+        <div class="p-5">
+
+          <span class="hero-eyebrow">
+            Est. 2022 · Piludara, Mehsana · Gujarat
+          </span>
+
+          <h1 class="hero-title">
+            Shaping the Future of <br>
+            <em>Healthcare Excellence</em>
+          </h1>
+
+          <p class="hero-sub">
+            Merchant Institute of Nursing prepares skilled, ethical and compassionate
+            professionals through academic excellence and real-world clinical training.
+          </p>
+
+          <!-- KEEPING YOUR NUNJUCKS URLS -->
+          <div class="home-hero__actions">
+            <a href="{{ '/admission/' | url }}" class="btn-primary">
+              Apply for Admission
+            </a>
+            <a href="{{ '/about/' | url }}" class="btn-outline-secondary">
+              Discover Our Story
+            </a>
+          </div>
+<div class="home-hero__badges mt-4">
+  <div class="hero-badge-pill">
+    <i class="fas fa-university"></i>
+    <span>HNGU Affiliated</span>
+  </div>
+  <div class="hero-badge-pill">
+    <i class="fas fa-certificate"></i>
+    <span>GNC Recognised</span>
+  </div>
+  <div class="hero-badge-pill">
+    <i class="fas fa-building-columns"></i>
+    <span>Govt. of Gujarat</span>
+  </div>
+</div>
+          <!-- Stats -->
+          <div class="hero-stats mt-5">
+  <div class="hero-stat">
+    <strong>30+</strong>
+    <span>Acre Campus</span>
+  </div>
+
+  <div class="hero-stat">
+    <strong>4</strong>
+    <span>Programs</span>
+  </div>
+
+  <div class="hero-stat">
+    <strong>210+</strong>
+    <span>Seats</span>
+  </div>
+</div>
+
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
@@ -82,8 +161,8 @@ permalink: /index.html
       <a href="{{ '/about/' | url }}" class="btn-primary mt-3">Learn More About Us</a>
     </div>
 
-    <!-- <div class="img-box" data-aos="fade-left" data-aos-delay="150" aria-hidden="true"></div> -->
- <div class="image-slider" data-aos="fade-left" data-aos-delay="150">
+    <div class="img-box" data-aos="fade-left" data-aos-delay="150" aria-hidden="true"></div>
+ <!-- <div class="image-slider" data-aos="fade-left" data-aos-delay="150">
       <div class="slider-container">
         <div class="slider-wrapper">
           <div class="slider-track">
@@ -105,13 +184,13 @@ permalink: /index.html
             </div>
           </div>
         </div>
-<!--  
+  
         <button class="slider-btn slider-btn--prev" aria-label="Previous slide">
           <i class="fas fa-chevron-left"></i>
         </button>
         <button class="slider-btn slider-btn--next" aria-label="Next slide">
           <i class="fas fa-chevron-right"></i>
-        </button> -->
+        </button> 
  
         <div class="slider-dots">
           <button class="dot active" data-slide="0" aria-label="Go to slide 1"></button>
@@ -120,7 +199,7 @@ permalink: /index.html
           <button class="dot" data-slide="3" aria-label="Go to slide 4"></button>
         </div>
       </div>
-    </div>
+    </div> -->
   </div>
 </section>
 
@@ -451,7 +530,7 @@ permalink: /index.html
 
     <div class="cta-actions" data-aos="fade-up" data-aos-delay="200">
       <a href="{{ '/admission/' | url }}" class="btn-primary btn-lg">Apply for Admission</a>
-      <a href="tel:9723706169" class="btn-outline text-primary btn-lg">
+      <a href="tel:9723706169" class="btn-outline-teal btn-lg">
         <i class="fa-solid fa-phone"></i> Call for Inquiry
       </a>
     </div>

@@ -145,68 +145,68 @@ function showEmpty(container) {
   `;
 }
 
-document.addEventListener("DOMContentLoaded", () => {
-  const sliderTrack = document.querySelector(".slider-track");
-  const dots = document.querySelectorAll(".dot");
-  // const prevBtn = document.querySelector(".slider-btn--prev");
-  // const nextBtn = document.querySelector(".slider-btn--next");
-  let currentSlide = 0;
-  const totalSlides = dots.length;
-  let autoplayInterval;
+// document.addEventListener("DOMContentLoaded", () => {
+//   const sliderTrack = document.querySelector(".slider-track");
+//   const dots = document.querySelectorAll(".dot");
+//   // const prevBtn = document.querySelector(".slider-btn--prev");
+//   // const nextBtn = document.querySelector(".slider-btn--next");
+//   let currentSlide = 0;
+//   const totalSlides = dots.length;
+//   let autoplayInterval;
 
-  function updateSlider() {
-    sliderTrack.style.transform = `translateX(-${currentSlide * 100}%)`;
+//   function updateSlider() {
+//     sliderTrack.style.transform = `translateX(-${currentSlide * 100}%)`;
 
-    dots.forEach((dot, index) => {
-      dot.classList.toggle("active", index === currentSlide);
-    });
-  }
+//     dots.forEach((dot, index) => {
+//       dot.classList.toggle("active", index === currentSlide);
+//     });
+//   }
 
-  function nextSlide() {
-    currentSlide = (currentSlide + 1) % totalSlides;
-    updateSlider();
-    resetAutoplay();
-  }
+//   function nextSlide() {
+//     currentSlide = (currentSlide + 1) % totalSlides;
+//     updateSlider();
+//     resetAutoplay();
+//   }
 
-  function prevSlide() {
-    currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
-    updateSlider();
-    resetAutoplay();
-  }
+//   function prevSlide() {
+//     currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+//     updateSlider();
+//     resetAutoplay();
+//   }
 
-  function goToSlide(index) {
-    currentSlide = index;
-    updateSlider();
-    resetAutoplay();
-  }
+//   function goToSlide(index) {
+//     currentSlide = index;
+//     updateSlider();
+//     resetAutoplay();
+//   }
 
-  function startAutoplay() {
-    autoplayInterval = setInterval(nextSlide, 5000);
-  }
+//   function startAutoplay() {
+//     autoplayInterval = setInterval(nextSlide, 5000);
+//   }
 
-  function resetAutoplay() {
-    clearInterval(autoplayInterval);
-    startAutoplay();
-  }
+//   function resetAutoplay() {
+//     clearInterval(autoplayInterval);
+//     startAutoplay();
+//   }
 
-  // prevBtn.addEventListener("click", prevSlide);
-  // nextBtn.addEventListener("click", nextSlide);
+//   // prevBtn.addEventListener("click", prevSlide);
+//   // nextBtn.addEventListener("click", nextSlide);
 
-  dots.forEach((dot, index) => {
-    dot.addEventListener("click", () => goToSlide(index));
-  });
+//   dots.forEach((dot, index) => {
+//     dot.addEventListener("click", () => goToSlide(index));
+//   });
 
-  // Pause on hover
-  document
-    .querySelector(".slider-container")
-    .addEventListener("mouseenter", () => {
-      clearInterval(autoplayInterval);
-    });
+//   // Pause on hover
+//   document
+//     .querySelector(".slider-container")
+//     .addEventListener("mouseenter", () => {
+//       clearInterval(autoplayInterval);
+//     });
 
-  document
-    .querySelector(".slider-container")
-    .addEventListener("mouseleave", startAutoplay);
+//   document
+//     .querySelector(".slider-container")
+//     .addEventListener("mouseleave", startAutoplay);
 
-  // Start autoplay
-  startAutoplay();
-});
+//   // Start autoplay
+//   startAutoplay();
+// });
